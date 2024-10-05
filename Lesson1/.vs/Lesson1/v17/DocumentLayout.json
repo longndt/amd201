@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web2\\views\\greenwich\\hanoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|solutionrelative:web2\\views\\greenwich\\hanoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web2\\wwwroot\\css\\greenwich.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|solutionrelative:web2\\wwwroot\\css\\greenwich.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\views\\home\\greenwich.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\views\\home\\greenwich.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web2\\controllers\\greenwichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|solutionrelative:web2\\controllers\\greenwichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\views\\home\\demo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\views\\home\\demo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A9954E30-7EE1-49B8-B16C-6EB25B6E278C}|Web1\\Web1.csproj|solutionrelative:web1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson1\\web2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FB2811F-8407-4D99-825E-1BCE0D25ECD5}|Web2\\Web2.csproj|solutionrelative:web2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 262,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -47,92 +35,59 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAADwvyAAAAAdAAAAAAAAAA==",
+              "Title": "HaNoi.cshtml",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Views\\Greenwich\\HaNoi.cshtml",
+              "RelativeDocumentMoniker": "Web2\\Views\\Greenwich\\HaNoi.cshtml",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Views\\Greenwich\\HaNoi.cshtml",
+              "RelativeToolTip": "Web2\\Views\\Greenwich\\HaNoi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T03:45:54.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Demo.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Demo.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Home\\Demo.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Demo.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Home\\Demo.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T03:43:01.438Z",
+              "WhenOpened": "2024-10-05T05:08:13.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Greenwich.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Greenwich.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Home\\Greenwich.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Greenwich.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Home\\Greenwich.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T03:42:52.024Z",
+              "Title": "GreenwichController.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Controllers\\GreenwichController.cs",
+              "RelativeDocumentMoniker": "Web2\\Controllers\\GreenwichController.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Controllers\\GreenwichController.cs",
+              "RelativeToolTip": "Web2\\Controllers\\GreenwichController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T05:08:10.39Z",
               "EditorCaption": ""
             },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web2\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web2\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-05T05:07:08.186Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 138,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Web1\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Web1\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAqwCAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T03:39:34.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T03:38:16.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Web1\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Web1\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAhAAAAAAAAAA==",
+              "Title": "greenwich.css",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\wwwroot\\css\\greenwich.css",
+              "RelativeDocumentMoniker": "Web2\\wwwroot\\css\\greenwich.css",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web2\\wwwroot\\css\\greenwich.css",
+              "RelativeToolTip": "Web2\\wwwroot\\css\\greenwich.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-05T03:27:48.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson1\\Web1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-05T03:16:05.598Z",
+              "WhenOpened": "2024-10-05T05:05:17.369Z",
               "EditorCaption": ""
             }
           ]

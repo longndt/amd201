@@ -28,3 +28,4 @@ D:\workspace\FGW-AMD201\amd201-co1103\Lesson1\Web1\obj\Debug\net8.0\refint\Web1.
 D:\workspace\FGW-AMD201\amd201-co1103\Lesson1\Web1\obj\Debug\net8.0\Web1.pdb
 D:\workspace\FGW-AMD201\amd201-co1103\Lesson1\Web1\obj\Debug\net8.0\Web1.genruntimeconfig.cache
 D:\workspace\FGW-AMD201\amd201-co1103\Lesson1\Web1\obj\Debug\net8.0\ref\Web1.dll
+D:\workspace\FGW-AMD201\amd201-co1103\Lesson1\Web1\obj\Debug\net8.0\Web1.sourcelink.json

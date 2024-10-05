@@ -1,0 +1,19 @@
+﻿.mau-do {
+    color: red;
+}
+
+.in-dam {
+    font-weight: bold;
+}
+
+.in-hoa {
+    text-transform: uppercase;
+}
+
+.in-nghieng {
+    font-style: italic;
+}
+
+.gach-chan {
+    text-decoration: underline;
+}
