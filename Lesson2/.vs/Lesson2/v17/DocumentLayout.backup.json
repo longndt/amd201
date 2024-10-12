@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web1\\views\\greenwich\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|solutionrelative:web1\\views\\greenwich\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|solutionrelative:web2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web1\\controllers\\greenwichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|solutionrelative:web1\\controllers\\greenwichcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web1\\views\\mobile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69DFA7C5-9506-490B-9967-5B68646DA080}|Web1\\Web1.csproj|solutionrelative:web1\\views\\mobile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|solutionrelative:web2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +17,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 266,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 274,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,47 +26,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Views\\Mobile\\Index.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Mobile\\Index.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Views\\Mobile\\Index.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Mobile\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T02:03:53.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GreenwichController.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Controllers\\GreenwichController.cs",
-              "RelativeDocumentMoniker": "Web1\\Controllers\\GreenwichController.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Controllers\\GreenwichController.cs",
-              "RelativeToolTip": "Web1\\Controllers\\GreenwichController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Web2\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Web2\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T02:02:06.977Z",
+              "WhenOpened": "2024-10-12T04:33:54.008Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 219,
+          "DockedWidth": 221,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Views\\Greenwich\\Index.cshtml",
-              "RelativeDocumentMoniker": "Web1\\Views\\Greenwich\\Index.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web1\\Views\\Greenwich\\Index.cshtml",
-              "RelativeToolTip": "Web1\\Views\\Greenwich\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Web2\\Views\\Home\\Login.cshtml",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Web2\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T02:02:34.234Z",
+              "WhenOpened": "2024-10-12T04:34:09.547Z",
               "EditorCaption": ""
             }
           ]

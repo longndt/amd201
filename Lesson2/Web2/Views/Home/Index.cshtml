@@ -1,0 +1,18 @@
+﻿@{
+    if (TempData["Success"] != null)
+    {
+        <p class="alert alert-danger">@TempData["Success"]</p>
+    }
+}
+
+<ul>Student List</ul>
+@foreach(var student in ViewBag.Students)
+{
+    <li>@student</li>
+}
+
+<ol>Number list</ol>
+@foreach(var number in (List<int>)ViewData["Numbers"])
+{
+    <li>@number</li>
+}

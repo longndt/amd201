@@ -1,0 +1,29 @@
+﻿@model List<Web2.Models.Student>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="4">STUDENT LIST (@Model.Count)</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Grade</td>
+                <td>
+                    <img src="@student.Image" 
+                    width="100" height="100" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
