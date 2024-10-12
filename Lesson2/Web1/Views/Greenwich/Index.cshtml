@@ -1,0 +1,36 @@
+﻿<h1>The current year is @ViewBag.Year </h1>
+<h2>We are studying in @ViewBag.DaiHoc</h2>
+<h3>We are living in @ViewBag.ThanhPho </h3>
+<h4>Pi Number = @ViewData["PiNumber"]</h4>
+<h5>Pass exam : @ViewData["Pass"]</h5>
+
+@{
+    foreach (string sport in ViewBag.Sports)
+    {
+        <p>@sport</p>
+    }
+}
+
+@foreach (var n in @ViewBag.Numbers)
+{
+    <h6>@n</h6>
+}
+
+@{
+    var a = 5;
+    var b = 10;
+    var c = a + b;
+    var comparison = "";
+    if (a > b)
+    {
+        comparison = "a is greater than b";
+    } else if (a < b)
+    {
+        comparison = "a is smaller than b";
+    } else
+    {
+        comparison = "a is equal to b";
+    }
+}
+<h5>c = @c</h5>
+<h5>@comparison</h5>
