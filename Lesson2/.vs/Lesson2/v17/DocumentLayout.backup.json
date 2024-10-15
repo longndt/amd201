@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|solutionrelative:web2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\lesson2\\web2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C6BCC59-27E9-40A8-9F53-51F7EFAB019E}|Web2\\Web2.csproj|solutionrelative:web2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -26,34 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Web2\\Controllers\\LoginController.cs",
               "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Web2\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T04:33:54.008Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 221,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Web2\\Views\\Home\\Login.cshtml",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Lesson2\\Web2\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Web2\\Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T04:34:09.547Z",
               "EditorCaption": ""
             }
           ]
