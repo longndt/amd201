@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using MVC.Models;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace MVC.Controllers
 {
@@ -20,6 +22,7 @@ namespace MVC.Controllers
         }
 
         // GET: Books
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Book.Include(b => b.Genre);
@@ -123,6 +126,7 @@ namespace MVC.Controllers
         }
 
         // GET: Books/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -155,6 +159,25 @@ namespace MVC.Controllers
         private bool BookExists(int id)
         {
             return _context.Book.Any(e => e.BookId == id);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Search(string keyword)
+        {
+            var books = await _context.Book.Include(b => b.Genre).Where(b => b.BookTitle.Contains(keyword)).ToListAsync();
+            return View("Index",books);
+        }
+
+        public async Task<IActionResult> SortPriceASC()
+        {
+            var books = await _context.Book.Include(b => b.Genre).OrderBy(b => b.BookPrice).ToListAsync();
+            return View("Index", books);
+        }
+
+        public async Task<IActionResult> SortPriceDESC()
+        {
+            var books = await _context.Book.Include(b => b.Genre).OrderByDescending(b => b.BookPrice).ToListAsync();
+            return View("Index", books);
         }
     }
 }

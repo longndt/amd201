@@ -43,6 +43,24 @@ namespace MVC.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Book");
+
+                    b.HasData(
+                        new
+                        {
+                            BookId = 1,
+                            BookImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCVxCsrGVMj5TB_AxYw2pZ3oAgQ1DzA62P-g&s",
+                            BookPrice = 99.0,
+                            BookTitle = "Clean Code",
+                            GenreId = 1
+                        },
+                        new
+                        {
+                            BookId = 2,
+                            BookImage = "https://salt.tikicdn.com/cache/w1200/ts/product/28/5d/6a/3f2c0fc6b18f65567b8ad08604d4423a.png",
+                            BookPrice = 88.0,
+                            BookTitle = "The Business Book",
+                            GenreId = 2
+                        });
                 });
 
             modelBuilder.Entity("MVC.Models.Genre", b =>
@@ -58,6 +76,18 @@ namespace MVC.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genre");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = 1,
+                            GenreName = "Information Technology"
+                        },
+                        new
+                        {
+                            GenreId = 2,
+                            GenreName = "Business"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -85,6 +115,22 @@ namespace MVC.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "adminRole",
+                            ConcurrencyStamp = "c0f8597d-053d-4903-885d-2c361a02fb6f",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "customerRole",
+                            ConcurrencyStamp = "c3319471-58ce-44fd-b862-3beb3aaa5664",
+                            Name = "Customer",
+                            NormalizedName = "CUSTOMER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -174,6 +220,40 @@ namespace MVC.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "admin",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "8b04451d-5ef9-4003-b825-0fda3495555a",
+                            Email = "admin@fpt.edu.vn",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@FPT.EDU.VN",
+                            NormalizedUserName = "ADMIN@FPT.EDU.VN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIjhySezMSKICRovTvT0n4Vt9Um5CqrYtXMWHCUCp08q5uKWfDVX/ap9g0V5F13TDw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "05dc3930-9e92-41af-ab94-e44f460f464e",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@fpt.edu.vn"
+                        },
+                        new
+                        {
+                            Id = "customer",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "d97e8233-f00f-4ca1-86cb-b2eb47615662",
+                            Email = "customer@fpt.edu.vn",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "CUSTOMER@FPT.EDU.VN",
+                            NormalizedUserName = "CUSTOMER@FPT.EDU.VN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPzp9wZKRPGuE5/6Slpl+bjQdgbkY80bQcGKVWJeVfhLSEpfRPkHae+PD4wuNxA1PA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "5b582973-fa7f-4d21-8e7d-e66f6264e332",
+                            TwoFactorEnabled = false,
+                            UserName = "customer@fpt.edu.vn"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -237,6 +317,18 @@ namespace MVC.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "admin",
+                            RoleId = "adminRole"
+                        },
+                        new
+                        {
+                            UserId = "customer",
+                            RoleId = "customerRole"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
