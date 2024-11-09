@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{485262F5-FC55-49F9-B937-5438F9B37D55}|API.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\api\\models\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{485262F5-FC55-49F9-B937-5438F9B37D55}|API.csproj|solutionrelative:models\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{485262F5-FC55-49F9-B937-5438F9B37D55}|API.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\api\\controllers\\mobilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{485262F5-FC55-49F9-B937-5438F9B37D55}|API.csproj|solutionrelative:controllers\\mobilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Migrations\\20241109043909_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241109043909_api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20241109043909_api.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Migrations\\20241109043909_api.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241109043909_api.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Migrations\\20241109043909_api.cs",
+              "RelativeToolTip": "Migrations\\20241109043909_api.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T04:39:09.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MobilesController.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Controllers\\MobilesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MobilesController.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Controllers\\MobilesController.cs",
+              "RelativeToolTip": "Controllers\\MobilesController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T04:33:48.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mobile.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Models\\Mobile.cs",
+              "RelativeDocumentMoniker": "Models\\Mobile.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\API\\Models\\Mobile.cs",
+              "RelativeToolTip": "Models\\Mobile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T04:23:19.237Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
