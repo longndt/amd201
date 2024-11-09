@@ -1,0 +1,34 @@
+﻿@model List<MVC.Models.UserViewModel>
+
+<h1>User List</h1>
+<table class="table table-info">
+    <tr>
+        <th>No.</th>
+        <th>User Id</th>
+        <th>User Email</th>
+        <th>User Role(s)</th>
+        <th>Actions</th>
+    </tr>
+    @{
+        var counter = 1;
+    }
+    @foreach(var user in Model)
+    {
+        <tr>
+            <td>@counter</td>
+            <td>@user.Id</td>
+            <td>@user.Email</td>
+            <td>@string.Join(", ", user.Roles)</td>
+            <td>
+                @if (!user.Roles.Contains("Admin"))
+                {
+                    <form asp-action="ResetPass" method="post">
+                        <input type="hidden" name="id" value="@user.Id" />
+                        <input class="btn btn-warning" type="submit" value="Reset Password" />
+                    </form>
+                }
+            </td>
+        </tr>
+        counter++;
+    }
+</table>
