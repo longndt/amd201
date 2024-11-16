@@ -3,3 +3,6 @@ build_property.RootNamespace = MVC
 build_property.ProjectDir = D:\workspace\FGW-AMD201\amd201-co1103\MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
