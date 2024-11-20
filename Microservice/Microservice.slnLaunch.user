@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "StudentService\\StudentService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "TeacherService\\TeacherService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "OcelotGateway\\OcelotGateway.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
