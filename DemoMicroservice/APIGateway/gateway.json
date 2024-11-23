@@ -1,0 +1,31 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:9999"             // gateway port
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/laptops", //gateway API url
+      "UpstreamHttpMethod": [ "Get" ], //gateway API method
+      "DownstreamPathTemplate": "/api/Laptops", //service API url
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5678 //service port
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/laptops", //gateway API url
+      "UpstreamHttpMethod": [ "Post" ], //gateway API method
+      "DownstreamPathTemplate": "/api/Laptops", //service API url
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5678 //service port
+        }
+      ]
+    }
+  ]
+}

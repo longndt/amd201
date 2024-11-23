@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "dKah3p4CMBmoZIEfEP6k2AyZZgX4qEukAEEIp4OduAI=",
+  "Source": "MobileService",
+  "BasePath": "_content/MobileService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
