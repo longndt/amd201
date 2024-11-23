@@ -3,6 +3,10 @@
     "Name": "New Profile",
     "Projects": [
       {
+        "Path": "ReactClient\\reactclient.esproj",
+        "Action": "Start"
+      },
+      {
         "Path": "LaptopService\\LaptopService.csproj",
         "Action": "Start"
       },

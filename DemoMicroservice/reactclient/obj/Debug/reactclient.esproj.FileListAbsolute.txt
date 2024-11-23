@@ -1,0 +1,1 @@
+D:\workspace\FGW-AMD201\amd201-co1103\DemoMicroservice\ReactClient\obj\Debug\reactclient.esproj.CoreCompileInputs.cache
