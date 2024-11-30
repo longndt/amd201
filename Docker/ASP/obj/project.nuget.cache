@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "WHCbn37EcP4=",
+  "success": true,
+  "projectFilePath": "D:\\workspace\\FGW-AMD201\\amd201\\DockerDemo\\DockerDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\longn\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
+}
