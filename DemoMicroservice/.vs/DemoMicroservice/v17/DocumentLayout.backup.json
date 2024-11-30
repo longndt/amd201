@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\reactclient\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|solutionrelative:reactclient\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|solutionrelative:apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -49,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 668,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,7 +73,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\index.html",
+              "RelativeDocumentMoniker": "reactclient\\index.html",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\index.html",
+              "RelativeToolTip": "reactclient\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-23T05:13:35.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "gateway.json",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\gateway.json",
               "RelativeDocumentMoniker": "APIGateway\\gateway.json",
@@ -77,22 +94,20 @@
               "RelativeToolTip": "APIGateway\\gateway.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T05:00:38.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T05:00:38.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Laptop.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-23T04:59:47.043Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Laptop [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql",
-              "ToolTip": "dbo.Laptop [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-23T04:59:47.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "LaptopServiceContext.cs",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Data\\LaptopServiceContext.cs",
               "RelativeDocumentMoniker": "LaptopService\\Data\\LaptopServiceContext.cs",
@@ -100,13 +115,12 @@
               "RelativeToolTip": "LaptopService\\Data\\LaptopServiceContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvx0AAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:58:35.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:58:35.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "APIGateway",
+              "DocumentIndex": 1,
+              "Title": "APIGateway.csproj",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\APIGateway.csproj",
               "RelativeDocumentMoniker": "APIGateway\\APIGateway.csproj",
               "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\APIGateway.csproj",
@@ -118,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LaptopServiceContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
@@ -126,12 +140,11 @@
               "RelativeToolTip": "LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
               "ViewState": "AgIAABgAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:52:12.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:52:12.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\Program.cs",
               "RelativeDocumentMoniker": "APIGateway\\Program.cs",
@@ -139,12 +152,11 @@
               "RelativeToolTip": "APIGateway\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAswAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:53:48.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:53:48.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Program.cs",
               "RelativeDocumentMoniker": "LaptopService\\Program.cs",
@@ -152,12 +164,11 @@
               "RelativeToolTip": "LaptopService\\Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:53:36.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:53:36.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "App.jsx",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\App.jsx",
               "RelativeDocumentMoniker": "reactclient\\src\\App.jsx",
@@ -165,12 +176,11 @@
               "RelativeToolTip": "reactclient\\src\\App.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-23T04:50:29.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:50:29.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Laptop.jsx",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\Laptop.jsx",
               "RelativeDocumentMoniker": "reactclient\\src\\Laptop.jsx",
@@ -178,12 +188,11 @@
               "RelativeToolTip": "reactclient\\src\\Laptop.jsx",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-23T04:46:33.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:46:33.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "package.json",
               "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\package.json",
               "RelativeDocumentMoniker": "reactclient\\package.json",
@@ -191,8 +200,7 @@
               "RelativeToolTip": "reactclient\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T04:45:55.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T04:45:55.516Z"
             }
           ]
         }
