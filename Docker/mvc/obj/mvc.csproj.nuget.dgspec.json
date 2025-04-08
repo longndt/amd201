@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\FGW\\AMD201\\Docker\\mvc\\mvc.csproj": {}
+    "D:\\workspace\\FGW\\AMD201\\docker\\mvc\\mvc.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\FGW\\AMD201\\Docker\\mvc\\mvc.csproj": {
+    "D:\\workspace\\FGW\\AMD201\\docker\\mvc\\mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\FGW\\AMD201\\Docker\\mvc\\mvc.csproj",
+        "projectUniqueName": "D:\\workspace\\FGW\\AMD201\\docker\\mvc\\mvc.csproj",
         "projectName": "mvc",
-        "projectPath": "D:\\workspace\\FGW\\AMD201\\Docker\\mvc\\mvc.csproj",
+        "projectPath": "D:\\workspace\\FGW\\AMD201\\docker\\mvc\\mvc.csproj",
         "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\FGW\\AMD201\\Docker\\mvc\\obj\\",
+        "outputPath": "D:\\workspace\\FGW\\AMD201\\docker\\mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,9 @@
+1) Build Docker Image
+docker build -t docker-mvc .
+
+2) Run Docker Image
+docker run -p 8080:8080 docker-mvc
+
+Note:
+- "8080" is web server port
+- "docker-mvc" is Docker image name
