@@ -1,0 +1,9 @@
+1) Build Docker Image
+docker build -t docker-node .
+
+2) Run Docker Image
+docker run -p 3000:3000 docker-node
+
+Notes:
+- "3000" is server port
+- "docker-node" is Docker image name

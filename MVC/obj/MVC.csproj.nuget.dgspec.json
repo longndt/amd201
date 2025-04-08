@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\FGW-AMD201\\amd201-co1103\\MVC\\MVC.csproj": {}
+    "D:\\workspace\\FGW-AMD201\\amd201\\MVC\\MVC.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\FGW-AMD201\\amd201-co1103\\MVC\\MVC.csproj": {
+    "D:\\workspace\\FGW-AMD201\\amd201\\MVC\\MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\MVC\\MVC.csproj",
+        "projectUniqueName": "D:\\workspace\\FGW-AMD201\\amd201\\MVC\\MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\MVC\\MVC.csproj",
+        "projectPath": "D:\\workspace\\FGW-AMD201\\amd201\\MVC\\MVC.csproj",
         "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\MVC\\obj\\",
+        "outputPath": "D:\\workspace\\FGW-AMD201\\amd201\\MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,9 +43,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
