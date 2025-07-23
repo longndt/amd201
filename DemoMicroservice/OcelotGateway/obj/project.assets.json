@@ -1919,11 +1919,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
+      "projectUniqueName": "D:\\workspace\\FGW-AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
       "projectName": "OcelotGateway",
-      "projectPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
+      "projectPath": "D:\\workspace\\FGW-AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
       "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-      "outputPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\obj\\",
+      "outputPath": "D:\\workspace\\FGW-AMD201\\DemoMicroservice\\OcelotGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

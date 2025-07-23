@@ -6,8 +6,8 @@
   "name": "localhost (Chrome)",
   "type": "chrome",
   "request": "launch",
-  "url": "http://localhost:63003",
-  "webRoot": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\ReactClient"
+  "url": "http://localhost:52820",
+  "webRoot": "D:\\ws\\FGW\\AMD201\\Demo\\ReactClient"
 }</LaunchJsonTarget>
   </PropertyGroup>
 </Project>

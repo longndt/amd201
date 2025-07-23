@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|d:\\ws\\fgw\\amd201\\demomicroservice\\ocelotgateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|d:\\ws\\fgw\\amd201\\demomicroservice\\ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\DemoMicroservice\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 1143,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,32 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\Program.cs",
-              "RelativeDocumentMoniker": "OcelotGateway\\Program.cs",
-              "ToolTip": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\Program.cs",
-              "RelativeToolTip": "OcelotGateway\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T02:37:29.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ocelot.json",
-              "DocumentMoniker": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\ocelot.json",
-              "RelativeDocumentMoniker": "OcelotGateway\\ocelot.json",
-              "ToolTip": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\ocelot.json",
-              "RelativeToolTip": "OcelotGateway\\ocelot.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-23T02:37:27.158Z",
-              "EditorCaption": ""
             }
           ]
         }

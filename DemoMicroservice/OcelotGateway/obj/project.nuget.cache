@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p7aFzuEBDUo=",
+  "dgSpecHash": "w15mp7SDUZY=",
   "success": true,
-  "projectFilePath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
+  "projectFilePath": "D:\\workspace\\FGW-AMD201\\DemoMicroservice\\OcelotGateway\\OcelotGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\longn\\.nuget\\packages\\cachemanager.core\\2.0.0\\cachemanager.core.2.0.0.nupkg.sha512",
     "C:\\Users\\longn\\.nuget\\packages\\cachemanager.microsoft.extensions.configuration\\2.0.0\\cachemanager.microsoft.extensions.configuration.2.0.0.nupkg.sha512",
