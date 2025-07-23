@@ -25,7 +25,7 @@ namespace LaptopService.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Laptop>>> GetLaptop()
         {
-            return await _context.Laptop.OrderByDescending(lap => lap.Id).ToListAsync();
+            return await _context.Laptop.ToListAsync();
         }
 
         // GET: api/Laptops/5

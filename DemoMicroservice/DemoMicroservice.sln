@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174
+VisualStudioVersion = 17.14.36310.24 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileService", "MobileService\MobileService.csproj", "{506A5DDF-0761-4444-9F6E-D2AFC841BF25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopService", "LaptopService\LaptopService.csproj", "{8CCE3209-2650-4FC8-B059-FE5B15D65BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopService", "LaptopService\LaptopService.csproj", "{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{2F097230-07D9-4610-8586-6C9125435270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{98FBB178-012A-462A-AD99-336A253355C8}"
-EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactclient", "ReactClient\reactclient.esproj", "{724BB588-07CE-4D6B-90C1-1365EB9D0D43}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactclient", "ReactClient\reactclient.esproj", "{3DAD034F-D828-0AF3-E40C-70CAB525D906}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,26 +15,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{506A5DDF-0761-4444-9F6E-D2AFC841BF25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{506A5DDF-0761-4444-9F6E-D2AFC841BF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{506A5DDF-0761-4444-9F6E-D2AFC841BF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{506A5DDF-0761-4444-9F6E-D2AFC841BF25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98FBB178-012A-462A-AD99-336A253355C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98FBB178-012A-462A-AD99-336A253355C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98FBB178-012A-462A-AD99-336A253355C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98FBB178-012A-462A-AD99-336A253355C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Release|Any CPU.Build.0 = Release|Any CPU
-		{724BB588-07CE-4D6B-90C1-1365EB9D0D43}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8CCE3209-2650-4FC8-B059-FE5B15D65BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCE3209-2650-4FC8-B059-FE5B15D65BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCE3209-2650-4FC8-B059-FE5B15D65BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCE3209-2650-4FC8-B059-FE5B15D65BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F097230-07D9-4610-8586-6C9125435270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F097230-07D9-4610-8586-6C9125435270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F097230-07D9-4610-8586-6C9125435270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F097230-07D9-4610-8586-6C9125435270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAD034F-D828-0AF3-E40C-70CAB525D906}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {024C1392-5E59-4FB1-A888-1B5E202AB671}
 	EndGlobalSection
 EndGlobal

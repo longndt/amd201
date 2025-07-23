@@ -1,0 +1,64 @@
+﻿import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import M from 'materialize-css'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
+function App() {
+    const APIendpoint = 'https://localhost:8888/gateway/laptops'
+    const [laptops, setLaptops] = useState([])
+    const [error, setError] = useState(null)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data } = await axios.get(APIendpoint)
+                setLaptops(data)
+            } catch (err) {
+                setError(err.message)
+            }
+        }
+
+        fetchData()
+    }, [])
+
+    if (error) {
+        return <div>Error: {error}</div>
+    }
+
+  return (
+      <div>
+              <h1>Laptop List</h1>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Laptop Id</th>
+                          <th>Laptop Brand</th>
+                          <th>Laptop Model</th>
+                          <th>Laptop Quantity</th>
+                          <th>Laptop Price</th>
+                          <th>Menu</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {
+                          laptops.map((laptop) => (
+                              <tr>
+                                  <td>{laptop.id}</td>
+                                  <td>{laptop.brand}</td>
+                                  <td>{laptop.model}</td>
+                                  <td>{laptop.quantity}</td>
+                                  <td>{laptop.price}$</td>
+                                  <td>
+                                      <a class="waves-effect waves-light btn-large">Delete</a>
+                                  </td>
+                              </tr>   
+                       ))}
+                  </tbody>
+              </table>
+      </div>
+   )
+}
+
+export default App

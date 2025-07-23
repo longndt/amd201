@@ -1,0 +1,75 @@
+﻿import './App.css'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
+function App() {
+    const apiEndpoint = 'https://localhost:8888/gateway/laptops'
+    const [laptops, setLaptops] = useState([])
+    const [error, setError] = useState(null)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data } = await axios.get(apiEndpoint)
+                setLaptops(data)
+            } catch (err) {
+                setError(err.message)
+            }
+        }
+
+        fetchData()
+    }, [])
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`${apiEndpoint}/${id}`)
+            setLaptops(laptops.filter(laptop => laptop.id !== id))
+        } catch (err) {
+            setError(err.message)
+        }
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>
+    }
+
+    return (
+        <div>
+            <h1>Laptop List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Laptop Id</th>
+                        <th>Laptop Brand</th>
+                        <th>Laptop Model</th>
+                        <th>Laptop Quantity</th>
+                        <th>Laptop Price</th>
+                        <th>Menu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {laptops.map((laptop) => (
+                        <tr key={laptop.id}>
+                            <td>{laptop.id}</td>
+                            <td>{laptop.brand}</td>
+                            <td>{laptop.model}</td>
+                            <td>{laptop.quantity}</td>
+                            <td>{laptop.price}$</td>
+                            <td>
+                                <button
+                                    className="waves-effect waves-light btn-large"
+                                    onClick={() => handleDelete(laptop.id)}
+                                    type="button"
+                                >
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
+}
+
+export default App

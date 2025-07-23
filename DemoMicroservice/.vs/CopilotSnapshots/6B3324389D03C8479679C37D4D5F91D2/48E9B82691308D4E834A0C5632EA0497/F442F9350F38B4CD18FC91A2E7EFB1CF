@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using LaptopService.Models;
+
+namespace LaptopService.Data
+{
+    public class LaptopServiceContext : DbContext
+    {
+        public LaptopServiceContext (DbContextOptions<LaptopServiceContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<LaptopService.Models.Laptop> Laptop { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            // Seed data for table Laptop
+            SeedLaptop(builder);
+        }
+
+        private void SeedLaptop(ModelBuilder builder)
+        {
+            builder.Entity<Laptop>().HasData(
+                new Laptop { Id = 1, Brand = "Apple", Model = "Macbook Pro M2", Quantity = 10, Price = 2345, Image = "https://bizweb.dktcdn.net/100/444/581/products/macbook-m1-vs-intel-1536x1268-6c00654d-ad87-4caf-8b88-aa6c34048199.png?v=1656134590567" },
+                new Laptop { Id = 2, Brand = "Dell", Model = "XPS 15", Quantity = 15, Price = 1999, Image = "https://thegioiso365.vn/wp-content/uploads/2023/04/Dell-xps-9530-3.png" },
+                new Laptop { Id = 3, Brand = "LG", Model = "Gram 17", Quantity = 22, Price = 2024, Image = "https://product.hstatic.net/1000333506/product/pc-gram-17z90q-b-gallery-02_dd780c6249ec430b84f82ed4666fffd6e.jpg" },
+                new Laptop { Id = 4, Brand = "HP", Model = "Spectre x360", Quantity = 8, Price = 1799, Image = "https://cdn.vox-cdn.com/thumbor/OxwBxyN-6NxzHqb2MnoMCgC7po0=/0x0:1200x675/920x613/filters:focal(504x379:696x571):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65863412/HP_Spectre_x360.0.jpg" },
+                new Laptop { Id = 5, Brand = "Asus", Model = "ZenBook 14", Quantity = 18, Price = 1499, Image = "https://static.asus.com/media/1546746/zenbook-14-ux433fa-dl-01.jpg" },
+                new Laptop { Id = 6, Brand = "Lenovo", Model = "ThinkPad X1 Carbon", Quantity = 12, Price = 1999, Image = "https://www.lenovo.com/medias/lenovo-thinkpad-x1-carbon-gen-8-hero-2.png?context=bWFzdGVyfGltYWdlc3w4MjY5N3xpbWFnZS9wbmd8aGFmL2g3L2hiMS9oNTgvOTg4MjY3ODQ3OTAyOC5wbmd8ZGQ4MzU4NjkwYzg0ZmQwZDkxZDg5ZjI5ZjMwZDZkOGQ" },
+                new Laptop { Id = 7, Brand = "Acer", Model = "Aspire 5", Quantity = 25, Price = 799, Image = "https://www.acer.com/ac/en/US/content/model/NX.HG3AA.001" },
+                new Laptop { Id = 8, Brand = "Microsoft", Model = "Surface Laptop 4", Quantity = 20, Price = 1699, Image = "https://www.microsoft.com/en-us/surface" },
+                new Laptop { Id = 9, Brand = "Razer", Model = "Blade 15", Quantity = 10, Price = 2499, Image = "https://www.razer.com/assets/images/razer-blade-15.jpg" },
+                new Laptop { Id = 10, Brand = "MSI", Model = "GE66 Raider", Quantity = 5, Price = 2299, Image = "https://www.msi.com/blog/wp-content/uploads/2021/04/GE66-3-960x540.jpg" },
+                new Laptop { Id = 11, Brand = "Samsung", Model = "Galaxy Book Pro", Quantity = 16, Price = 1799, Image = "https://www.samsung.com/latin_en/galaxy-book-pro/" },
+                new Laptop { Id = 12, Brand = "Google", Model = "Pixelbook Go", Quantity = 14, Price = 999, Image = "https://store.google.com/us/product/pixelbook_go" },
+                new Laptop { Id = 13, Brand = "Acer", Model = "Chromebook 14", Quantity = 30, Price = 599, Image = "https://www.acer.com/ac/en/US/content/model/NX.GX8AA.004" },
+                new Laptop { Id = 14, Brand = "HP", Model = "Omen 15", Quantity = 8, Price = 1899, Image = "https://www.hp.com/us-en/shop/pdp/hp-omen-15-laptop" },
+                new Laptop { Id = 15, Brand = "Alienware", Model = "m15 R4", Quantity = 6, Price = 2299, Image = "https://www.dell.com/en-us/shop/alienware-m15-laptop/spd/alienware-m15-laptop" },
+                new Laptop { Id = 16, Brand = "Dell", Model = "Inspiron 15", Quantity = 25, Price = 799, Image = "https://www.dell.com/en-us/shop/dell-laptops/inspiron-15-laptop/spd/inspiron-15-5501-laptop" },
+                new Laptop { Id = 17, Brand = "Apple", Model = "MacBook Air", Quantity = 12, Price = 999, Image = "https://www.apple.com/macbook-air/" },
+                new Laptop { Id = 18, Brand = "Lenovo", Model = "Legion 5", Quantity = 9, Price = 1299, Image = "https://www.lenovo.com/us/en/laptops/legion/legion-5" },
+                new Laptop { Id = 19, Brand = "Huawei", Model = "MateBook X Pro", Quantity = 7, Price = 1799, Image = "https://consumer.huawei.com/en/laptops/matebook-x-pro-2021/" },
+                new Laptop { Id = 20, Brand = "Microsoft", Model = "Surface Book 3", Quantity = 11, Price = 1599, Image = "https://www.microsoft.com/en-us/surface" }
+            );
+        }
+
+    }
+}

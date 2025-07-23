@@ -1,58 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\",
+  "WorkspaceRootPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\reactclient\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|solutionrelative:reactclient\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|d:\\ws\\fgw\\amd201\\demomicroservice\\ocelotgateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|solutionrelative:apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\laptopservice\\data\\laptopservicecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|solutionrelative:laptopservice\\data\\laptopservicecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\apigateway\\gateway.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|solutionrelative:apigateway\\gateway.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98FBB178-012A-462A-AD99-336A253355C8}|APIGateway\\APIGateway.csproj|solutionrelative:apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\laptopservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|solutionrelative:laptopservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\reactclient\\src\\laptop.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|solutionrelative:reactclient\\src\\laptop.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\reactclient\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|solutionrelative:reactclient\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\laptopservice\\migrations\\laptopservicecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4EE1749-EA34-4E95-AFED-6FFA95774BA8}|LaptopService\\LaptopService.csproj|solutionrelative:laptopservice\\migrations\\laptopservicecontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\demomicroservice\\reactclient\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{724BB588-07CE-4D6B-90C1-1365EB9D0D43}|ReactClient\\reactclient.esproj|solutionrelative:reactclient\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|d:\\ws\\fgw\\amd201\\demomicroservice\\ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2F097230-07D9-4610-8586-6C9125435270}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 668,
+          "DockedHeight": 1143,
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -74,132 +39,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\index.html",
-              "RelativeDocumentMoniker": "reactclient\\index.html",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\index.html",
-              "RelativeToolTip": "reactclient\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-23T05:13:35.104Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\Program.cs",
+              "RelativeDocumentMoniker": "OcelotGateway\\Program.cs",
+              "ToolTip": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\Program.cs",
+              "RelativeToolTip": "OcelotGateway\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T02:37:29.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "gateway.json",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\gateway.json",
-              "RelativeDocumentMoniker": "APIGateway\\gateway.json",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\gateway.json",
-              "RelativeToolTip": "APIGateway\\gateway.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T05:00:38.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.Laptop.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/LaptopServiceContext_95e63645_64e0_4119_a750_c70b3b17b1de/True/SqlTable/dbo.Laptop.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-23T04:59:47.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LaptopServiceContext.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Data\\LaptopServiceContext.cs",
-              "RelativeDocumentMoniker": "LaptopService\\Data\\LaptopServiceContext.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Data\\LaptopServiceContext.cs",
-              "RelativeToolTip": "LaptopService\\Data\\LaptopServiceContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvx0AAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:58:35.303Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "APIGateway.csproj",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\APIGateway.csproj",
-              "RelativeDocumentMoniker": "APIGateway\\APIGateway.csproj",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\APIGateway.csproj",
-              "RelativeToolTip": "APIGateway\\APIGateway.csproj",
+              "Title": "ocelot.json",
+              "DocumentMoniker": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "OcelotGateway\\ocelot.json",
+              "ToolTip": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\OcelotGateway\\ocelot.json",
+              "RelativeToolTip": "OcelotGateway\\ocelot.json",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-23T04:53:38.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LaptopServiceContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
-              "RelativeToolTip": "LaptopService\\Migrations\\LaptopServiceContextModelSnapshot.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:52:12.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\Program.cs",
-              "RelativeDocumentMoniker": "APIGateway\\Program.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\APIGateway\\Program.cs",
-              "RelativeToolTip": "APIGateway\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswAgAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:53:48.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Program.cs",
-              "RelativeDocumentMoniker": "LaptopService\\Program.cs",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\Program.cs",
-              "RelativeToolTip": "LaptopService\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T04:53:36.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.jsx",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\App.jsx",
-              "RelativeDocumentMoniker": "reactclient\\src\\App.jsx",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\App.jsx",
-              "RelativeToolTip": "reactclient\\src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-23T04:50:29.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Laptop.jsx",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\Laptop.jsx",
-              "RelativeDocumentMoniker": "reactclient\\src\\Laptop.jsx",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\src\\Laptop.jsx",
-              "RelativeToolTip": "reactclient\\src\\Laptop.jsx",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-23T04:46:33.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "package.json",
-              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\package.json",
-              "RelativeDocumentMoniker": "reactclient\\package.json",
-              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\reactclient\\package.json",
-              "RelativeToolTip": "reactclient\\package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T04:45:55.516Z"
+              "WhenOpened": "2025-07-23T02:37:27.158Z",
+              "EditorCaption": ""
             }
           ]
         }

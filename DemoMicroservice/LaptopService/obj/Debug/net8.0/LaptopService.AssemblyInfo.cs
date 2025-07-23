@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaptopService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68ee4ef768b516b9857698e39cb29587e97cc17b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fe2b588acf8bae3b448a7a89948df677f47341f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaptopService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaptopService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

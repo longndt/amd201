@@ -200,21 +200,21 @@
             "type": "integer",
             "format": "int32"
           },
-          "name": {
+          "brand": {
             "type": "string",
             "nullable": true
           },
-          "color": {
+          "model": {
             "type": "string",
             "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
           },
           "quantity": {
             "type": "integer",
             "format": "int32"
-          },
-          "image": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false

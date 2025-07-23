@@ -3,15 +3,15 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "ReactClient\\reactclient.esproj",
-        "Action": "Start"
-      },
-      {
         "Path": "LaptopService\\LaptopService.csproj",
         "Action": "Start"
       },
       {
-        "Path": "APIGateway\\APIGateway.csproj",
+        "Path": "OcelotGateway\\OcelotGateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ReactClient\\reactclient.esproj",
         "Action": "Start"
       }
     ]

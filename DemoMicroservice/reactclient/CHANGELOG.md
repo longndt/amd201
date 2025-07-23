@@ -5,7 +5,7 @@ The following tools were used to generate this project:
 
 The following steps were used to generate this project:
 - Create react project with create-vite: `npm init --yes vite@latest reactclient -- --template=react`.
-- Updating vite.config.js with port.
+- Updating `vite.config.js` with port.
 - Create project file (`reactclient.esproj`).
 - Create `launch.json` to enable debugging.
 - Add project to solution.

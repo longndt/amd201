@@ -1,6 +1,0 @@
-@LaptopService_HostAddress = http://localhost:5072
-
-GET {{LaptopService_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

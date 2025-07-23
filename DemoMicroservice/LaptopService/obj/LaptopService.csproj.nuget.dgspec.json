@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\LaptopService.csproj": {}
+    "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\LaptopService\\LaptopService.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\LaptopService.csproj": {
+    "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\LaptopService\\LaptopService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\LaptopService.csproj",
+        "projectUniqueName": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\LaptopService\\LaptopService.csproj",
         "projectName": "LaptopService",
-        "projectPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\LaptopService.csproj",
+        "projectPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\LaptopService\\LaptopService.csproj",
         "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\DemoMicroservice\\LaptopService\\obj\\",
+        "outputPath": "D:\\ws\\FGW\\AMD201\\DemoMicroservice\\LaptopService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,9 +43,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

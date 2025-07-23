@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "AXqc3AUk/64MQyUb2MwbJFXEvTG/mODnlMFV1uVmYC0=",
-  "Source": "LaptopService",
-  "BasePath": "_content/LaptopService",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"AXqc3AUk/64MQyUb2MwbJFXEvTG/mODnlMFV1uVmYC0=","Source":"LaptopService","BasePath":"_content/LaptopService","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
