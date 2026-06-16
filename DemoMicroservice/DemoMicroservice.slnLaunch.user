@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "LaptopService\\LaptopService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "OcelotGateway\\OcelotGateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ReactClient\\reactclient.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

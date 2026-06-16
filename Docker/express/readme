@@ -1,0 +1,9 @@
+1) Build Docker Image
+docker build -t docker-express .
+
+2) Run Docker Image
+docker run -p 3000:3000 docker-express
+
+Notes:
+- "3000" is server port
+- "docker-express" is Docker image name

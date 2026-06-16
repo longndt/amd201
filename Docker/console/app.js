@@ -1,0 +1,1 @@
+console.log("Hello Docker from Greenwich Vietnam !")

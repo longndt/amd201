@@ -1,0 +1,31 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:8888"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/laptops",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/laptops",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6666
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/laptops/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/laptops/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6666
+        }
+      ]
+    }
+  ]
+}

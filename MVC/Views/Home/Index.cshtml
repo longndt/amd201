@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="hero mb-5">
+    <h1 class="display-4">Welcome to the Book Store</h1>
+    <p class="lead">Browse our collection of books across Information Technology, Business, Science, Literature and History.</p>
+    <div class="mt-4">
+        <a asp-controller="Books" asp-action="Index" class="btn btn-light btn-lg mr-2">Browse Books</a>
+        <a asp-controller="Genres" asp-action="Index" class="btn btn-outline-light btn-lg">View Genres</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card feature-card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Wide Selection</h5>
+                <p class="card-text text-muted">A curated catalogue of books organised by genre for easy browsing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card feature-card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Manage Easily</h5>
+                <p class="card-text text-muted">Add, edit and update books with cover images from a URL or a file upload.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card feature-card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Search &amp; Sort</h5>
+                <p class="card-text text-muted">Find titles by keyword and sort the catalogue by price in a click.</p>
+            </div>
+        </div>
+    </div>
+</div>

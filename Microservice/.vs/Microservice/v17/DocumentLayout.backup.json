@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Microservice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D5CA11A2-182D-4154-B855-11F7FD01C049}|OcelotGateway\\OcelotGateway.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\microservice\\ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D5CA11A2-182D-4154-B855-11F7FD01C049}|OcelotGateway\\OcelotGateway.csproj|solutionrelative:ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92383C99-EBC4-48EB-B1F5-7CB9D1022274}|StudentService\\StudentService.csproj|d:\\workspace\\fgw-amd201\\amd201-co1103\\microservice\\studentservice\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92383C99-EBC4-48EB-B1F5-7CB9D1022274}|StudentService\\StudentService.csproj|solutionrelative:studentservice\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 425,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Microservice\\StudentService\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "StudentService\\Controllers\\StudentsController.cs",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Microservice\\StudentService\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "StudentService\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T09:35:53.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Microservice\\OcelotGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "OcelotGateway\\ocelot.json",
+              "ToolTip": "D:\\workspace\\FGW-AMD201\\amd201-co1103\\Microservice\\OcelotGateway\\ocelot.json",
+              "RelativeToolTip": "OcelotGateway\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-20T09:35:33.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

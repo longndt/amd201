@@ -1,0 +1,8 @@
+1) Build Docker Image
+docker build -t docker-console .
+
+2) Run Docker Image
+docker run docker-console
+
+Note:
+- "docker-console" is Docker image name

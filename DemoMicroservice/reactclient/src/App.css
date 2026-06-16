@@ -1,0 +1,78 @@
+/* App.css - Compatible with Materialize CSS */
+
+/* Override default Materialize styles if needed */
+body {
+  background-color: #f5f5f5 !important;
+}
+
+h1 {
+  color: #333 !important;
+  margin-top: 2rem !important;
+}
+
+/* Ensure table is centered */
+table.centered {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Custom table styling with borders */
+table {
+  background: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  overflow: hidden !important;
+  margin: 2rem auto !important;
+  width: 95% !important;
+  max-width: 1000px !important;
+}
+
+/* Table header styling */
+table th {
+  background: #1976d2 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  padding: 15px 10px !important;
+  border-right: 1px solid #1565c0 !important;
+}
+
+table th:last-child {
+  border-right: none !important;
+}
+
+/* Table cell styling */
+table td {
+  text-align: center !important;
+  padding: 12px 10px !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  border-right: 1px solid #e0e0e0 !important;
+}
+
+table td:last-child {
+  border-right: none !important;
+}
+
+/* Remove border from last row */
+table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Striped rows */
+table tbody tr:nth-child(even) {
+  background-color: #f8f9fa !important;
+}
+
+table tbody tr:hover {
+  background-color: #e3f2fd !important;
+}
+
+/* Custom button styling to match the design */
+.btn-large {
+  font-size: 0.9rem !important;
+  padding: 0 1.5rem !important;
+  height: 40px !important;
+  line-height: 40px !important;
+}
