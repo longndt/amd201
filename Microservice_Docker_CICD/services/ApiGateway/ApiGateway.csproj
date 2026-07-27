@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Ocelot API Gateway (any recent 23.x targets .NET 8). -->
+    <PackageReference Include="Ocelot" Version="23.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Make sure the routing tables are copied next to the built app. -->
+    <None Update="ocelot.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Update="ocelot.Docker.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Update="ocelot.Production.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+
+</Project>

@@ -1,12 +1,12 @@
-### Auth Service — manual API tests
-### Use the VS Code "REST Client" extension (humao.rest-client): click "Send Request".
-### Or copy these as curl commands.
+### Auth endpoints — tested THROUGH the API Gateway (Ocelot).
+### The browser/clients only ever call the gateway at :7000.
+### (You can also hit the Auth service directly at http://localhost:7001 for Swagger.)
 
-@authUrl = http://localhost:5001
+@gateway = http://localhost:7000
 
 ### 1. Register a new user
 # Returns 200 with a JWT token on success, or 409 if username/email exists.
-POST {{authUrl}}/api/auth/register
+POST {{gateway}}/api/auth/register
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ### 2. Login
 # @name login   <-- names this response so we can reuse its token below.
-POST {{authUrl}}/api/auth/login
+POST {{gateway}}/api/auth/login
 Content-Type: application/json
 
 {
@@ -25,12 +25,11 @@ Content-Type: application/json
   "password": "secret123"
 }
 
-### 3. Copy the token from the login response.
-# In REST Client you can reference it automatically:
+### 3. The token is now available as:
 @token = {{login.response.body.token}}
 
 ### 4. (Negative test) Login with a wrong password -> 401 Unauthorized
-POST {{authUrl}}/api/auth/login
+POST {{gateway}}/api/auth/login
 Content-Type: application/json
 
 {
@@ -38,5 +37,5 @@ Content-Type: application/json
   "password": "wrong-password"
 }
 
-### 5. Health check
-GET {{authUrl}}/health
+### 5. Gateway health check
+GET {{gateway}}/health

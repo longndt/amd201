@@ -62,7 +62,7 @@
   <section class="slide active center">
     <span class="emoji">🛒</span>
     <h1>Build a Microservices CRUD App</h1>
-    <p class="big muted">React · ASP.NET Core · SQL Server · Docker · CI/CD · Render</p>
+    <p class="big muted">React · ASP.NET Core · Ocelot Gateway · SQL Server · Docker · Docker Hub · CI/CD · Render</p>
     <p class="muted" style="margin-top:26px">A hands-on lab · use <kbd>→</kbd> / <kbd>←</kbd> or Space to navigate</p>
   </section>
 
@@ -73,12 +73,13 @@
       <li>Users <b>register / log in</b> → get a <b>JWT</b> (Authentication service)</li>
       <li>Logged-in users <b>Create / Read / Update / Delete</b> products (CRUD service)</li>
       <li>The Product API is <b>protected</b> — no valid token, no access</li>
+      <li>An <b>Ocelot API Gateway</b> (:7000) is the single entry point for the browser</li>
     </ul>
     <div class="grid">
-      <div class="box"><h3 class="tag-indigo">Frontend</h3><p class="muted">React (Vite) single-page app</p></div>
-      <div class="box"><h3 class="tag-green">2 backends</h3><p class="muted">ASP.NET Core Web APIs</p></div>
+      <div class="box"><h3 class="tag-indigo">Frontend</h3><p class="muted">React (Vite) — calls only the gateway</p></div>
+      <div class="box"><h3 class="tag-green">3 backends</h3><p class="muted">Gateway + 2 ASP.NET Core Web APIs</p></div>
       <div class="box"><h3 class="tag-amber">Database</h3><p class="muted">SQL Server (one DB per service)</p></div>
-      <div class="box"><h3>Ops</h3><p class="muted">Docker · GitHub Actions · Render</p></div>
+      <div class="box"><h3>Ops</h3><p class="muted">Docker · GitHub Actions · Docker Hub · Render</p></div>
     </div>
   </section>
 
@@ -89,8 +90,9 @@
       <li>A <b>small, independently deployable</b> service that owns <b>one</b> job</li>
       <li><b>Database-per-service:</b> each service owns its own data — no shared tables</li>
       <li>Services talk over <b>HTTP/REST</b></li>
+      <li>An <b>API gateway</b> gives clients a single entry point and routes to the right service</li>
     </ul>
-    <p class="muted" style="margin-top:20px">Here: an <span class="tag-green">Auth</span> service and a <span class="tag-amber">Product</span> service, each with its own SQL Server database.</p>
+    <p class="muted" style="margin-top:20px">Here: an <span class="tag-green">Auth</span> service and a <span class="tag-amber">Product</span> service (each with its own SQL Server database) behind an <b>Ocelot</b> gateway.</p>
   </section>
 
   <!-- 4 -->
@@ -124,9 +126,9 @@
     <p>No manual install — run it as a container:</p>
     <pre><code>docker run -e "ACCEPT_EULA=Y" \
   -e "MSSQL_SA_PASSWORD=Your_password123" \
-  -p 1433:1433 --name lab-sqlserver -d \
+  -p 14330:1433 --name lab-sqlserver -d \
   mcr.microsoft.com/mssql/server:2022-latest</code></pre>
-    <p class="muted" style="margin-top:14px">Each service creates its own DB on first run via <code>EnsureCreated()</code>.</p>
+    <p class="muted" style="margin-top:14px">Host port <b>14330</b> (non-default → no clashes). Each service creates its own DB on first run via <code>EnsureCreated()</code>.</p>
   </section>
 
   <!-- 8 -->
@@ -154,14 +156,29 @@
 
   <!-- 10 -->
   <section class="slide">
-    <h2><span class="kicker">Part D</span>React frontend</h2>
+    <h2><span class="kicker">Part D</span>API Gateway (Ocelot) — :7000</h2>
+    <ul>
+      <li>Single entry point: the browser calls <b>only</b> <code>localhost:7000</code></li>
+      <li>A JSON routing table maps <code>/api/auth/*</code> → :7001 and <code>/api/products/*</code> → :7002</li>
+      <li>Forwards the <code>Authorization</code> header — but the Product service <b>still validates</b> the JWT</li>
+      <li>CORS lives here now (one place, not per-service)</li>
+    </ul>
+    <div class="box" style="margin-top:18px">
+      <p>Three routing files, picked by <code>ASPNETCORE_ENVIRONMENT</code>:<br/>
+      <code>ocelot.json</code> (local) · <code>ocelot.Docker.json</code> (compose) · <code>ocelot.Production.json</code> (Render)</p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <h2><span class="kicker">Part E</span>React frontend — :7173</h2>
     <div class="grid">
-      <div class="box"><h3>api.js</h3><p class="muted">fetch wrapper; attaches the Bearer token</p></div>
+      <div class="box"><h3>api.js</h3><p class="muted">fetch wrapper; ONE base URL (the gateway); attaches the Bearer token</p></div>
       <div class="box"><h3>AuthContext</h3><p class="muted">stores user + token in localStorage</p></div>
       <div class="box"><h3>Pages</h3><p class="muted">Login · Register · Products (CRUD)</p></div>
       <div class="box"><h3>ProtectedRoute</h3><p class="muted">redirects anonymous users to /login</p></div>
     </div>
-    <p class="muted" style="margin-top:16px">⚠️ Vite reads <code>VITE_*</code> env vars at <b>build time</b>.</p>
+    <p class="muted" style="margin-top:16px">⚠️ Vite reads <code>VITE_API_URL</code> at <b>build time</b> — it's baked into the bundle.</p>
   </section>
 
   <!-- 11 -->
@@ -172,14 +189,15 @@
 
   <!-- 12 -->
   <section class="slide">
-    <h2><span class="kicker">Part F</span>Docker Compose — one command</h2>
+    <h2><span class="kicker">Part G</span>Docker Compose — one command</h2>
     <pre><code>docker compose up --build</code></pre>
     <ul style="margin-top:16px">
-      <li>Frontend → <code>localhost:8080</code></li>
-      <li>Auth → <code>localhost:5001</code> · Product → <code>localhost:5002</code></li>
+      <li>Frontend → <code>localhost:7080</code> · Gateway → <code>localhost:7000</code></li>
+      <li>Auth → <code>localhost:7001</code> · Product → <code>localhost:7002</code> · SQL → <code>localhost,14330</code></li>
+      <li>Gateway runs with <code>ASPNETCORE_ENVIRONMENT=Docker</code> → loads <code>ocelot.Docker.json</code></li>
     </ul>
     <div class="box" style="margin-top:16px;border-color:var(--amber)">
-      <p>Inside the compose network the DB host is <code>sqlserver</code>, <b>not</b> <code>localhost</code>. #1 gotcha!</p>
+      <p>Inside the compose network the DB host is <code>sqlserver,1433</code>, <b>not</b> <code>localhost</code>. #1 gotcha!</p>
     </div>
   </section>
 
@@ -196,29 +214,30 @@
 
   <!-- 14 -->
   <section class="slide">
-    <h2><span class="kicker">Part G</span>CI/CD with GitHub Actions</h2>
+    <h2><span class="kicker">Part H</span>CI/CD — GitHub Actions → Docker Hub</h2>
     <img src="images/cicd-flow.svg" alt="cicd" style="width:100%;border-radius:12px;background:#fff"/>
-    <p class="muted" style="margin-top:14px">Build & test the services, build Docker images, then deploy on push to <code>main</code>.</p>
+    <p class="muted" style="margin-top:14px">Build &amp; test → build <b>4 images</b> → <b>push to Docker Hub</b> (<code>:latest</code> + commit SHA) → tell Render to pull. Build once, deploy the exact image you tested.</p>
   </section>
 
   <!-- 15 -->
   <section class="slide">
-    <h2><span class="kicker">Part H</span>Deploy to Render</h2>
+    <h2><span class="kicker">Part I</span>Deploy to Render — from Docker Hub</h2>
     <ul>
-      <li>Two ASP.NET services as <b>Docker web services</b></li>
-      <li>React as a <b>static site</b> (build → publish <code>dist</code>)</li>
-      <li>Config via <b>environment variables</b>: connection string, JWT key, CORS</li>
+      <li>All 4 services deployed as <b>existing images</b> pulled from Docker Hub</li>
+      <li>Order: services → gateway (needs service URLs) → frontend (gateway URL baked in)</li>
+      <li>Config via <b>environment variables</b>: conn string, JWT key, gateway <code>Routes__*</code>, CORS</li>
       <li>SQL Server hosted externally (Azure SQL free) — Render gets the connection string</li>
     </ul>
-    <p class="muted" style="margin-top:14px">Deploy hooks + GitHub secrets → every push auto-deploys. 🚀</p>
+    <p class="muted" style="margin-top:14px">Deploy hooks + GitHub secrets → every push builds, pushes &amp; redeploys. 🚀</p>
   </section>
 
   <!-- 16 -->
   <section class="slide">
-    <h2><span class="kicker">Don't get stuck</span>Top 3 pitfalls</h2>
+    <h2><span class="kicker">Don't get stuck</span>Top 4 pitfalls</h2>
     <ol>
-      <li><b>401 everywhere:</b> JWT key/issuer/audience differ between services</li>
-      <li><b>CORS error:</b> frontend URL not in <code>AllowedOrigins</code></li>
+      <li><b>401 everywhere:</b> JWT key/issuer/audience differ between Auth &amp; Product</li>
+      <li><b>CORS error:</b> frontend URL not in the <b>gateway's</b> <code>AllowedOrigins</code></li>
+      <li><b>Gateway 404/502:</b> wrong <code>ocelot.*.json</code> loaded, or wrong downstream host</li>
       <li><b>DB unreachable in Docker:</b> used <code>localhost</code> instead of <code>sqlserver</code></li>
     </ol>
   </section>
@@ -227,7 +246,7 @@
   <section class="slide center">
     <span class="emoji">🎓</span>
     <h2 style="border:0">You built a real microservices app</h2>
-    <p class="muted big">2 ASP.NET services · JWT auth · SQL Server · React · Docker · CI/CD · Render</p>
+    <p class="muted big">Ocelot gateway · 2 ASP.NET services · JWT auth · SQL Server · React · Docker · Docker Hub CI/CD · Render</p>
     <p style="margin-top:22px">Questions? Open <code>README.md</code> for the full step-by-step.</p>
   </section>
 

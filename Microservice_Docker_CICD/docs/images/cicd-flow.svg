@@ -1,52 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" font-family="Segoe UI, system-ui, sans-serif">
-  <rect width="960" height="300" fill="#f8fafc"/>
-  <text x="480" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">CI/CD Pipeline (GitHub Actions → Render)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1000" height="340" fill="#f8fafc"/>
+  <text x="500" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">CI/CD Pipeline — GitHub Actions → Docker Hub → Render</text>
 
   <defs>
     <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#475569"/></marker>
   </defs>
 
-  <!-- steps -->
+  <!-- row 1 -->
   <g>
-    <rect x="24" y="120" width="140" height="70" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
-    <text x="94" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#3730a3">git push</text>
-    <text x="94" y="172" text-anchor="middle" font-size="12" fill="#64748b">to main</text>
+    <rect x="30" y="90" width="135" height="66" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="97" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">git push</text>
+    <text x="97" y="138" text-anchor="middle" font-size="11" fill="#64748b">to main</text>
   </g>
-
-  <path d="M164 155 h40" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
-
-  <g>
-    <rect x="208" y="120" width="150" height="70" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
-    <text x="283" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">Build &amp; Test</text>
-    <text x="283" y="167" text-anchor="middle" font-size="11" fill="#047857">dotnet build · npm build</text>
-  </g>
-
-  <path d="M358 155 h40" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M165 123 h34" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
 
   <g>
-    <rect x="402" y="120" width="150" height="70" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
-    <text x="477" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#854d0e">Docker Build</text>
-    <text x="477" y="167" text-anchor="middle" font-size="11" fill="#a16207">3 images verified</text>
+    <rect x="203" y="90" width="150" height="66" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+    <text x="278" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#065f46">Build &amp; Test</text>
+    <text x="278" y="133" text-anchor="middle" font-size="10" fill="#047857">dotnet build/test · npm build</text>
   </g>
-
-  <path d="M552 155 h40" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M353 123 h34" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
 
   <g>
-    <rect x="596" y="120" width="150" height="70" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
-    <text x="671" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">Deploy Hook</text>
-    <text x="671" y="167" text-anchor="middle" font-size="11" fill="#b45309">curl Render hooks</text>
+    <rect x="391" y="90" width="150" height="66" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+    <text x="466" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#854d0e">Build images</text>
+    <text x="466" y="133" text-anchor="middle" font-size="10" fill="#a16207">gateway · auth · product · web</text>
   </g>
-
-  <path d="M746 155 h40" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M541 123 h34" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
 
   <g>
-    <rect x="790" y="120" width="150" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-    <text x="865" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">Live on Render</text>
-    <text x="865" y="167" text-anchor="middle" font-size="11" fill="#15803d">auto redeploy 🚀</text>
+    <rect x="579" y="90" width="160" height="66" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="659" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#1e40af">Push → Docker Hub</text>
+    <text x="659" y="133" text-anchor="middle" font-size="10" fill="#2563eb">4 tagged images :latest</text>
   </g>
 
-  <text x="283" y="230" text-anchor="middle" font-size="11" fill="#64748b">runs on every push &amp; PR</text>
-  <text x="671" y="230" text-anchor="middle" font-size="11" fill="#64748b">only on push to main</text>
+  <!-- down arrow -->
+  <path d="M659 156 v34" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
 
-  <text x="480" y="272" text-anchor="middle" font-size="13" fill="#475569">Defined in .github/workflows/ci-cd.yml — jobs: build-backend, build-frontend, docker-build, deploy.</text>
+  <!-- row 2 -->
+  <g>
+    <rect x="579" y="200" width="160" height="66" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+    <text x="659" y="228" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Render deploy hook</text>
+    <text x="659" y="247" text-anchor="middle" font-size="10" fill="#b45309">pull image from Docker Hub</text>
+  </g>
+  <path d="M579 233 h-40" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <g>
+    <rect x="379" y="200" width="160" height="66" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="459" y="228" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">Live on Render</text>
+    <text x="459" y="247" text-anchor="middle" font-size="10" fill="#15803d">gateway + services + web 🚀</text>
+  </g>
+
+  <text x="278" y="180" text-anchor="middle" font-size="10" fill="#64748b">runs on every push &amp; PR</text>
+  <text x="659" y="180" text-anchor="middle" font-size="10" fill="#64748b">push to main only</text>
+
+  <text x="500" y="308" text-anchor="middle" font-size="12" fill="#475569">Defined in .github/workflows/ci-cd.yml — jobs: build-backend · test-backend · build-frontend · docker-push · deploy.</text>
 </svg>
