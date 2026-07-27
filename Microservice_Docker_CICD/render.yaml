@@ -1,0 +1,66 @@
+# Render Blueprint — provisions the app services from this repo.
+# Docs: https://render.com/docs/blueprint-spec
+#
+# ABOUT THE DATABASE:
+# Render's free tier does NOT run SQL Server. To keep SQL Server end-to-end we
+# host the database OUTSIDE Render (a free managed SQL Server such as the
+# Azure SQL Database free offer) and give Render only the connection string.
+# So there is NO `databases:` block here — you paste the SQL Server connection
+# string into the ConnectionStrings__DefaultConnection env var (marked sync:false)
+# in the Render dashboard. See the tutorial, Part 8.
+services:
+  # ----- Auth microservice -----
+  - type: web
+    name: lab-authservice
+    runtime: docker
+    dockerfilePath: ./services/AuthService/Dockerfile
+    dockerContext: ./services/AuthService
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        sync: false                 # paste your Azure SQL / SQL Server connection string
+      - key: Jwt__Key
+        generateValue: true         # Render generates a strong secret once…
+      - key: Jwt__Issuer
+        value: MicroserviceLab
+      - key: Jwt__Audience
+        value: MicroserviceLabClients
+      - key: AllowedOrigins
+        sync: false                 # set to your frontend URL after first deploy
+
+  # ----- Product (CRUD) microservice -----
+  - type: web
+    name: lab-productservice
+    runtime: docker
+    dockerfilePath: ./services/ProductService/Dockerfile
+    dockerContext: ./services/ProductService
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        sync: false                 # SAME database is fine, or a separate one
+      - key: Jwt__Key
+        fromService:                # reuse the EXACT key the Auth service generated
+          type: web
+          name: lab-authservice
+          envVarKey: Jwt__Key
+      - key: Jwt__Issuer
+        value: MicroserviceLab
+      - key: Jwt__Audience
+        value: MicroserviceLabClients
+      - key: AllowedOrigins
+        sync: false
+
+  # ----- React frontend (static site) -----
+  - type: web
+    name: lab-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_AUTH_API_URL
+        sync: false                 # set to the deployed auth service URL
+      - key: VITE_PRODUCT_API_URL
+        sync: false                 # set to the deployed product service URL

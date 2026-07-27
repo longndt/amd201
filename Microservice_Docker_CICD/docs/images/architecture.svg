@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="920" height="520" fill="#f8fafc"/>
+  <text x="460" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">System Architecture — Microservices CRUD App</text>
+
+  <!-- Browser / React -->
+  <rect x="40" y="200" width="200" height="120" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="235" text-anchor="middle" font-size="17" font-weight="700" fill="#3730a3">Browser</text>
+  <text x="140" y="262" text-anchor="middle" font-size="14" fill="#4338ca">React SPA (Vite)</text>
+  <text x="140" y="284" text-anchor="middle" font-size="12" fill="#6366f1">http://localhost:8080</text>
+  <text x="140" y="304" text-anchor="middle" font-size="12" fill="#64748b">Login · Register · CRUD</text>
+
+  <!-- Auth service -->
+  <rect x="380" y="90" width="220" height="130" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="490" y="122" text-anchor="middle" font-size="17" font-weight="700" fill="#065f46">Auth Service</text>
+  <text x="490" y="146" text-anchor="middle" font-size="13" fill="#047857">ASP.NET Core Web API</text>
+  <text x="490" y="167" text-anchor="middle" font-size="12" fill="#059669">:5001  ·  /api/auth</text>
+  <text x="490" y="188" text-anchor="middle" font-size="12" fill="#64748b">register · login · issue JWT</text>
+
+  <!-- Product service -->
+  <rect x="380" y="300" width="220" height="130" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#92400e">Product Service</text>
+  <text x="490" y="356" text-anchor="middle" font-size="13" fill="#b45309">ASP.NET Core Web API</text>
+  <text x="490" y="377" text-anchor="middle" font-size="12" fill="#d97706">:5002  ·  /api/products</text>
+  <text x="490" y="398" text-anchor="middle" font-size="12" fill="#64748b">[Authorize] CRUD · validate JWT</text>
+
+  <!-- Databases -->
+  <g>
+    <ellipse cx="800" cy="110" rx="55" ry="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <path d="M745 110 v40 a55 16 0 0 0 110 0 v-40" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="800" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">AuthDb</text>
+    <text x="800" y="185" text-anchor="middle" font-size="11" fill="#64748b">SQL Server</text>
+  </g>
+  <g>
+    <ellipse cx="800" cy="330" rx="55" ry="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <path d="M745 330 v40 a55 16 0 0 0 110 0 v-40" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="800" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">ProductDb</text>
+    <text x="800" y="405" text-anchor="middle" font-size="11" fill="#64748b">SQL Server</text>
+  </g>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- React -> Auth -->
+  <path d="M240 240 C 310 200, 330 175, 380 160" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="11" fill="#334155">POST /login → JWT</text>
+
+  <!-- React -> Product -->
+  <path d="M240 285 C 310 320, 330 345, 380 360" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="345" text-anchor="middle" font-size="11" fill="#334155">Bearer JWT + CRUD</text>
+
+  <!-- Auth -> DB -->
+  <path d="M600 150 C 680 130, 700 120, 745 118" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Product -> DB -->
+  <path d="M600 360 C 680 345, 700 338, 745 335" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- shared key link -->
+  <path d="M490 220 L 490 300" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="500" y="265" font-size="11" fill="#64748b">shared JWT signing key</text>
+
+  <text x="460" y="480" text-anchor="middle" font-size="13" fill="#475569">Each service owns its own database (database-per-service). Auth signs tokens; Product validates them statelessly.</text>
+</svg>

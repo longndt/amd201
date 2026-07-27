@@ -1,0 +1,93 @@
+name: CI/CD
+
+# Runs on every push / PR to main.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # 1) BUILD & TEST the .NET services -----------------------------------------
+  build-backend:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [ AuthService, ProductService ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore services/${{ matrix.service }}/${{ matrix.service }}.csproj
+
+      - name: Build
+        run: dotnet build services/${{ matrix.service }}/${{ matrix.service }}.csproj --configuration Release --no-restore
+
+  # 1b) UNIT TESTS for the .NET services --------------------------------------
+  test-backend:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test: [ AuthService.Tests, ProductService.Tests ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Test
+        run: dotnet test services/${{ matrix.test }}/${{ matrix.test }}.csproj --configuration Release --verbosity normal
+
+  # 2) BUILD the React frontend -----------------------------------------------
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & build
+        working-directory: frontend
+        run: |
+          npm install
+          npm run build
+
+  # 3) BUILD Docker images (verify Dockerfiles are valid) ---------------------
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: [ build-backend, test-backend, build-frontend ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Auth image
+        run: docker build -t lab-authservice ./services/AuthService
+
+      - name: Build Product image
+        run: docker build -t lab-productservice ./services/ProductService
+
+      - name: Build Frontend image
+        run: docker build -t lab-frontend ./frontend
+
+  # 4) DEPLOY to Render (only on push to main) --------------------------------
+  # Trigger Render's deploy hooks. Add the hook URLs as GitHub repo secrets.
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [ docker-build ]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Trigger Render deploys
+        run: |
+          echo "Deploying services to Render…"
+          curl -fsSL -X POST "${{ secrets.RENDER_DEPLOY_HOOK_AUTH }}"
+          curl -fsSL -X POST "${{ secrets.RENDER_DEPLOY_HOOK_PRODUCT }}"
+          curl -fsSL -X POST "${{ secrets.RENDER_DEPLOY_HOOK_FRONTEND }}"

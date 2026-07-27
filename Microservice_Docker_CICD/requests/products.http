@@ -1,0 +1,62 @@
+### Product Service — manual API tests
+### These endpoints REQUIRE a JWT. First run requests/auth.http to log in,
+### then paste the token into @token below (or run the login request here).
+
+@authUrl = http://localhost:5001
+@productUrl = http://localhost:5002
+
+### 0. Log in to get a token (so this file works on its own)
+# @name login
+POST {{authUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "secret123"
+}
+
+### Grab the token from the login response above.
+@token = {{login.response.body.token}}
+
+### 1. (Negative test) List products WITHOUT a token -> 401 Unauthorized
+GET {{productUrl}}/api/products
+
+### 2. List all products (authorized)
+GET {{productUrl}}/api/products
+Authorization: Bearer {{token}}
+
+### 3. Create a product
+# @name created
+POST {{productUrl}}/api/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "USB-C Hub",
+  "description": "7-in-1 aluminium hub",
+  "price": 34.5,
+  "stock": 12
+}
+
+### 4. Get the product we just created by id
+GET {{productUrl}}/api/products/{{created.response.body.id}}
+Authorization: Bearer {{token}}
+
+### 5. Update that product
+PUT {{productUrl}}/api/products/{{created.response.body.id}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "USB-C Hub (v2)",
+  "description": "7-in-1 aluminium hub, updated",
+  "price": 39.9,
+  "stock": 20
+}
+
+### 6. Delete that product -> 204 No Content
+DELETE {{productUrl}}/api/products/{{created.response.body.id}}
+Authorization: Bearer {{token}}
+
+### 7. Health check
+GET {{productUrl}}/health

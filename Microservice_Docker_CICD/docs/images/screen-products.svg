@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="820" height="560" fill="#0f172a"/>
+  <!-- navbar -->
+  <rect x="0" y="0" width="820" height="52" fill="#111827"/>
+  <text x="24" y="32" font-size="16" font-weight="700" fill="#e2e8f0">🛒 Microservice Lab</text>
+  <text x="600" y="32" font-size="13" fill="#94a3b8">Hi, student</text>
+  <rect x="690" y="14" width="80" height="26" rx="7" fill="none" stroke="#334155"/>
+  <text x="730" y="32" text-anchor="middle" font-size="12" fill="#e2e8f0">Logout</text>
+
+  <!-- add form card -->
+  <rect x="40" y="76" width="740" height="150" rx="12" fill="#1e293b" stroke="#334155"/>
+  <text x="62" y="106" font-size="17" font-weight="700" fill="#e2e8f0">Add product</text>
+  <rect x="62" y="122" width="340" height="34" rx="7" fill="#273449" stroke="#334155"/>
+  <text x="76" y="144" font-size="12" fill="#94a3b8">Name</text>
+  <rect x="418" y="122" width="340" height="34" rx="7" fill="#273449" stroke="#334155"/>
+  <text x="432" y="144" font-size="12" fill="#94a3b8">Description</text>
+  <rect x="62" y="164" width="340" height="34" rx="7" fill="#273449" stroke="#334155"/>
+  <text x="76" y="186" font-size="12" fill="#94a3b8">Price</text>
+  <rect x="418" y="164" width="340" height="34" rx="7" fill="#273449" stroke="#334155"/>
+  <text x="432" y="186" font-size="12" fill="#94a3b8">Stock</text>
+
+  <!-- table card -->
+  <rect x="40" y="244" width="740" height="270" rx="12" fill="#1e293b" stroke="#334155"/>
+  <text x="62" y="274" font-size="17" font-weight="700" fill="#e2e8f0">Products</text>
+
+  <!-- header row -->
+  <text x="62" y="306" font-size="12" fill="#94a3b8">ID</text>
+  <text x="110" y="306" font-size="12" fill="#94a3b8">Name</text>
+  <text x="300" y="306" font-size="12" fill="#94a3b8">Description</text>
+  <text x="520" y="306" font-size="12" fill="#94a3b8">Price</text>
+  <text x="600" y="306" font-size="12" fill="#94a3b8">Stock</text>
+  <line x1="62" y1="316" x2="758" y2="316" stroke="#334155"/>
+
+  <!-- rows -->
+  <g font-size="13" fill="#e2e8f0">
+    <text x="62" y="344">1</text>
+    <text x="110" y="344">Wireless Mouse</text>
+    <text x="300" y="344" fill="#cbd5e1">2.4GHz ergonomic mouse</text>
+    <text x="520" y="344">$19.99</text>
+    <text x="600" y="344">50</text>
+  </g>
+  <rect x="650" y="330" width="46" height="22" rx="6" fill="#273449"/><text x="673" y="345" text-anchor="middle" font-size="11" fill="#e2e8f0">Edit</text>
+  <rect x="702" y="330" width="52" height="22" rx="6" fill="#ef4444"/><text x="728" y="345" text-anchor="middle" font-size="11" fill="#fff">Delete</text>
+  <line x1="62" y1="360" x2="758" y2="360" stroke="#334155"/>
+
+  <g font-size="13" fill="#e2e8f0">
+    <text x="62" y="388">2</text>
+    <text x="110" y="388">Mechanical Keyboard</text>
+    <text x="300" y="388" fill="#cbd5e1">RGB, blue switches</text>
+    <text x="520" y="388">$59.90</text>
+    <text x="600" y="388">30</text>
+  </g>
+  <rect x="650" y="374" width="46" height="22" rx="6" fill="#273449"/><text x="673" y="389" text-anchor="middle" font-size="11" fill="#e2e8f0">Edit</text>
+  <rect x="702" y="374" width="52" height="22" rx="6" fill="#ef4444"/><text x="728" y="389" text-anchor="middle" font-size="11" fill="#fff">Delete</text>
+  <line x1="62" y1="404" x2="758" y2="404" stroke="#334155"/>
+
+  <text x="410" y="545" text-anchor="middle" font-size="12" fill="#64748b">Figure: Products CRUD screen — protected by JWT. Click Edit to load a row into the form; Delete removes it.</text>
+</svg>

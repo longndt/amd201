@@ -1,0 +1,42 @@
+### Auth Service — manual API tests
+### Use the VS Code "REST Client" extension (humao.rest-client): click "Send Request".
+### Or copy these as curl commands.
+
+@authUrl = http://localhost:5001
+
+### 1. Register a new user
+# Returns 200 with a JWT token on success, or 409 if username/email exists.
+POST {{authUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "student",
+  "email": "student@lab.com",
+  "password": "secret123"
+}
+
+### 2. Login
+# @name login   <-- names this response so we can reuse its token below.
+POST {{authUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "secret123"
+}
+
+### 3. Copy the token from the login response.
+# In REST Client you can reference it automatically:
+@token = {{login.response.body.token}}
+
+### 4. (Negative test) Login with a wrong password -> 401 Unauthorized
+POST {{authUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "wrong-password"
+}
+
+### 5. Health check
+GET {{authUrl}}/health

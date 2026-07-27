@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Microservices CRUD Lab — Slides</title>
+<style>
+  :root{
+    --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --muted:#94a3b8;
+    --primary:#6366f1; --green:#10b981; --amber:#f59e0b; --border:#334155;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Roboto,sans-serif;overflow:hidden}
+  .deck{height:100vh;display:flex;align-items:center;justify-content:center}
+  .slide{display:none;width:min(1000px,92vw);padding:48px 56px;animation:fade .35s ease}
+  .slide.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  h1{font-size:2.6rem;line-height:1.15;margin-bottom:18px}
+  h2{font-size:2rem;margin-bottom:22px;color:#fff}
+  h2 .kicker{display:block;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:var(--primary);margin-bottom:8px}
+  p,li{font-size:1.2rem;line-height:1.6;color:var(--text)}
+  ul,ol{margin-left:26px;margin-top:10px}
+  li{margin-bottom:12px}
+  .muted{color:var(--muted)}
+  .center{text-align:center}
+  code{background:#0b1220;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:1rem;color:#a5b4fc}
+  pre{background:#0b1220;border:1px solid var(--border);border-radius:10px;padding:18px 20px;overflow:auto;margin-top:16px}
+  pre code{border:0;background:none;padding:0;color:#e2e8f0;font-size:1.02rem;line-height:1.5}
+  .pill{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:.95rem;margin:4px 6px 4px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  .box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+  .box h3{font-size:1.15rem;margin-bottom:8px}
+  .tag-green{color:var(--green)} .tag-amber{color:var(--amber)} .tag-indigo{color:var(--primary)}
+  .big{font-size:1.5rem}
+  .footer{position:fixed;bottom:16px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 28px;color:var(--muted);font-size:.9rem}
+  .bar{position:fixed;top:0;left:0;height:4px;background:var(--primary);transition:width .3s}
+  .nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:10px}
+  .nav button{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:1rem}
+  .nav button:hover{border-color:var(--primary)}
+  .emoji{font-size:3rem;display:block;margin-bottom:10px}
+  kbd{background:#0b1220;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:.9rem}
+
+  /* Export to PDF: browser menu → Print → "Save as PDF" (Landscape, margins None,
+     enable "Background graphics"). Each slide becomes one page. */
+  @media print{
+    @page{ size:landscape; margin:0; }
+    html,body{height:auto;overflow:visible;background:#0f172a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .bar,.footer,.nav{display:none !important}
+    .deck{display:block;height:auto}
+    .slide{display:block !important;width:100%;min-height:100vh;page-break-after:always;break-after:page;padding:60px 70px;animation:none}
+    .slide:last-child{page-break-after:auto}
+    img{background:#fff}
+  }
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="deck">
+
+  <!-- 1 -->
+  <section class="slide active center">
+    <span class="emoji">🛒</span>
+    <h1>Build a Microservices CRUD App</h1>
+    <p class="big muted">React · ASP.NET Core · SQL Server · Docker · CI/CD · Render</p>
+    <p class="muted" style="margin-top:26px">A hands-on lab · use <kbd>→</kbd> / <kbd>←</kbd> or Space to navigate</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide">
+    <h2><span class="kicker">Goal</span>What we're building</h2>
+    <ul>
+      <li>Users <b>register / log in</b> → get a <b>JWT</b> (Authentication service)</li>
+      <li>Logged-in users <b>Create / Read / Update / Delete</b> products (CRUD service)</li>
+      <li>The Product API is <b>protected</b> — no valid token, no access</li>
+    </ul>
+    <div class="grid">
+      <div class="box"><h3 class="tag-indigo">Frontend</h3><p class="muted">React (Vite) single-page app</p></div>
+      <div class="box"><h3 class="tag-green">2 backends</h3><p class="muted">ASP.NET Core Web APIs</p></div>
+      <div class="box"><h3 class="tag-amber">Database</h3><p class="muted">SQL Server (one DB per service)</p></div>
+      <div class="box"><h3>Ops</h3><p class="muted">Docker · GitHub Actions · Render</p></div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide">
+    <h2><span class="kicker">Concept</span>What is a microservice?</h2>
+    <ul>
+      <li>A <b>small, independently deployable</b> service that owns <b>one</b> job</li>
+      <li><b>Database-per-service:</b> each service owns its own data — no shared tables</li>
+      <li>Services talk over <b>HTTP/REST</b></li>
+    </ul>
+    <p class="muted" style="margin-top:20px">Here: an <span class="tag-green">Auth</span> service and a <span class="tag-amber">Product</span> service, each with its own SQL Server database.</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide">
+    <h2><span class="kicker">Architecture</span>How it fits together</h2>
+    <img src="images/architecture.svg" alt="architecture" style="width:100%;border-radius:12px;background:#fff"/>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <h2><span class="kicker">The key idea</span>JWT across services</h2>
+    <ol>
+      <li>Auth service <b>signs</b> a token with a secret key on login</li>
+      <li>React stores it and sends <code>Authorization: Bearer &lt;token&gt;</code></li>
+      <li>Product service <b>validates</b> it with the <b>same key</b> — no call back to Auth</li>
+    </ol>
+    <div class="box" style="margin-top:20px;border-color:var(--amber)">
+      <p>🔑 <b>Golden rule:</b> <code>Jwt__Key</code>, <code>Jwt__Issuer</code>, <code>Jwt__Audience</code> must be <b>identical</b> in both services — or you get <b>401</b>.</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide">
+    <h2><span class="kicker">Flow</span>Login → token → protected call</h2>
+    <img src="images/jwt-flow.svg" alt="jwt flow" style="width:100%;border-radius:12px;background:#fff"/>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <h2><span class="kicker">Part A</span>SQL Server in Docker</h2>
+    <p>No manual install — run it as a container:</p>
+    <pre><code>docker run -e "ACCEPT_EULA=Y" \
+  -e "MSSQL_SA_PASSWORD=Your_password123" \
+  -p 1433:1433 --name lab-sqlserver -d \
+  mcr.microsoft.com/mssql/server:2022-latest</code></pre>
+    <p class="muted" style="margin-top:14px">Each service creates its own DB on first run via <code>EnsureCreated()</code>.</p>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <h2><span class="kicker">Part B</span>Auth service (ASP.NET)</h2>
+    <ul>
+      <li><code>POST /api/auth/register</code> and <code>POST /api/auth/login</code></li>
+      <li>Passwords hashed with <b>PBKDF2</b> + random salt — never stored raw</li>
+      <li><code>TokenService</code> signs the JWT; returns <code>{ token, expiresAt }</code></li>
+      <li>EF Core + SQL Server → <code>AuthDb</code></li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide">
+    <h2><span class="kicker">Part C</span>Product CRUD service</h2>
+    <ul>
+      <li>Full CRUD on <code>/api/products</code></li>
+      <li><code>[Authorize]</code> on the controller → every route needs a valid JWT</li>
+      <li><code>AddJwtBearer(...)</code> validates issuer, audience, lifetime, signature</li>
+      <li>Own database → <code>ProductDb</code> (seeded with 2 sample products)</li>
+    </ul>
+    <p class="muted" style="margin-top:16px">Demo: <code>GET /api/products</code> → <b>401</b> → Authorize → <b>200</b> 🎉</p>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <h2><span class="kicker">Part D</span>React frontend</h2>
+    <div class="grid">
+      <div class="box"><h3>api.js</h3><p class="muted">fetch wrapper; attaches the Bearer token</p></div>
+      <div class="box"><h3>AuthContext</h3><p class="muted">stores user + token in localStorage</p></div>
+      <div class="box"><h3>Pages</h3><p class="muted">Login · Register · Products (CRUD)</p></div>
+      <div class="box"><h3>ProtectedRoute</h3><p class="muted">redirects anonymous users to /login</p></div>
+    </div>
+    <p class="muted" style="margin-top:16px">⚠️ Vite reads <code>VITE_*</code> env vars at <b>build time</b>.</p>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide center">
+    <h2>The app</h2>
+    <img src="images/screen-products.svg" alt="products screen" style="width:min(760px,90%);border-radius:12px"/>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <h2><span class="kicker">Part F</span>Docker Compose — one command</h2>
+    <pre><code>docker compose up --build</code></pre>
+    <ul style="margin-top:16px">
+      <li>Frontend → <code>localhost:8080</code></li>
+      <li>Auth → <code>localhost:5001</code> · Product → <code>localhost:5002</code></li>
+    </ul>
+    <div class="box" style="margin-top:16px;border-color:var(--amber)">
+      <p>Inside the compose network the DB host is <code>sqlserver</code>, <b>not</b> <code>localhost</code>. #1 gotcha!</p>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide">
+    <h2><span class="kicker">Docker</span>Multi-stage builds</h2>
+    <ul>
+      <li><b>Build stage:</b> heavy SDK / Node — compiles the app</li>
+      <li><b>Runtime stage:</b> tiny image — runs only the output</li>
+      <li>Result: smaller, faster, more secure images</li>
+    </ul>
+    <p class="muted" style="margin-top:16px">Frontend: Node builds → <b>nginx</b> serves the static files.</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="slide">
+    <h2><span class="kicker">Part G</span>CI/CD with GitHub Actions</h2>
+    <img src="images/cicd-flow.svg" alt="cicd" style="width:100%;border-radius:12px;background:#fff"/>
+    <p class="muted" style="margin-top:14px">Build & test the services, build Docker images, then deploy on push to <code>main</code>.</p>
+  </section>
+
+  <!-- 15 -->
+  <section class="slide">
+    <h2><span class="kicker">Part H</span>Deploy to Render</h2>
+    <ul>
+      <li>Two ASP.NET services as <b>Docker web services</b></li>
+      <li>React as a <b>static site</b> (build → publish <code>dist</code>)</li>
+      <li>Config via <b>environment variables</b>: connection string, JWT key, CORS</li>
+      <li>SQL Server hosted externally (Azure SQL free) — Render gets the connection string</li>
+    </ul>
+    <p class="muted" style="margin-top:14px">Deploy hooks + GitHub secrets → every push auto-deploys. 🚀</p>
+  </section>
+
+  <!-- 16 -->
+  <section class="slide">
+    <h2><span class="kicker">Don't get stuck</span>Top 3 pitfalls</h2>
+    <ol>
+      <li><b>401 everywhere:</b> JWT key/issuer/audience differ between services</li>
+      <li><b>CORS error:</b> frontend URL not in <code>AllowedOrigins</code></li>
+      <li><b>DB unreachable in Docker:</b> used <code>localhost</code> instead of <code>sqlserver</code></li>
+    </ol>
+  </section>
+
+  <!-- 17 -->
+  <section class="slide center">
+    <span class="emoji">🎓</span>
+    <h2 style="border:0">You built a real microservices app</h2>
+    <p class="muted big">2 ASP.NET services · JWT auth · SQL Server · React · Docker · CI/CD · Render</p>
+    <p style="margin-top:22px">Questions? Open <code>README.md</code> for the full step-by-step.</p>
+  </section>
+
+</div>
+
+<div class="footer">
+  <span>Microservices CRUD Lab</span>
+  <span id="counter">1 / 17</span>
+</div>
+<div class="nav">
+  <button onclick="go(-1)">◀ Prev</button>
+  <button onclick="go(1)">Next ▶</button>
+  <button onclick="window.print()" title="Save as PDF">⤓ PDF</button>
+</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  function render(){
+    slides.forEach((s,n)=>s.classList.toggle('active',n===i));
+    document.getElementById('counter').textContent=(i+1)+' / '+slides.length;
+    document.getElementById('bar').style.width=((i+1)/slides.length*100)+'%';
+  }
+  function go(d){ i=Math.min(slides.length-1,Math.max(0,i+d)); render(); }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '){go(1);e.preventDefault();}
+    if(e.key==='ArrowLeft'){go(-1);}
+    if(e.key==='Home'){i=0;render();}
+    if(e.key==='End'){i=slides.length-1;render();}
+  });
+  render();
+</script>
+</body>
+</html>

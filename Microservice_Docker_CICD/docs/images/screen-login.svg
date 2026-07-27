@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="720" height="460" fill="#0f172a"/>
+  <!-- navbar -->
+  <rect x="0" y="0" width="720" height="52" fill="#111827"/>
+  <text x="24" y="32" font-size="16" font-weight="700" fill="#e2e8f0">🛒 Microservice Lab</text>
+  <text x="560" y="32" font-size="14" fill="#94a3b8">Login</text>
+  <text x="630" y="32" font-size="14" fill="#94a3b8">Register</text>
+
+  <!-- card -->
+  <rect x="210" y="100" width="300" height="300" rx="12" fill="#1e293b" stroke="#334155"/>
+  <text x="234" y="140" font-size="20" font-weight="700" fill="#e2e8f0">Login</text>
+
+  <text x="234" y="175" font-size="12" fill="#94a3b8">Username</text>
+  <rect x="234" y="184" width="252" height="38" rx="8" fill="#273449" stroke="#334155"/>
+  <text x="248" y="208" font-size="13" fill="#e2e8f0">student</text>
+
+  <text x="234" y="248" font-size="12" fill="#94a3b8">Password</text>
+  <rect x="234" y="257" width="252" height="38" rx="8" fill="#273449" stroke="#334155"/>
+  <text x="248" y="281" font-size="13" fill="#94a3b8">••••••••</text>
+
+  <rect x="234" y="315" width="252" height="40" rx="8" fill="#6366f1"/>
+  <text x="360" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Login</text>
+
+  <text x="234" y="382" font-size="12" fill="#94a3b8">No account? </text>
+  <text x="316" y="382" font-size="12" fill="#6366f1">Register here</text>
+
+  <text x="360" y="435" text-anchor="middle" font-size="12" fill="#64748b">Figure: Login screen (React SPA). Register looks the same, plus an Email field.</text>
+</svg>
