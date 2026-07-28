@@ -1,10 +1,9 @@
 # Runs the WHOLE stack locally with one command:  docker compose up --build
 #
-#   frontend (nginx)      -> http://localhost:7080
-#   API gateway (Ocelot)  -> http://localhost:7000   (the browser talks only to this)
-#   auth service (API)    -> http://localhost:7001   (Swagger at /swagger)
-#   product service (API) -> http://localhost:7002   (Swagger at /swagger)
-#   sqlserver             -> localhost,14330
+#   frontend (nginx)      -> http://localhost:8080
+#   auth service (API)    -> http://localhost:5001   (Swagger at /swagger)
+#   product service (API) -> http://localhost:5002   (Swagger at /swagger)
+#   sqlserver             -> localhost,1433
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -13,10 +12,7 @@ services:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: "Your_password123"
     ports:
-      - "14330:1433"
-    volumes:
-      # Persist database files so your data survives `docker compose down`.
-      - sqldata:/var/opt/mssql
+      - "1433:1433"
     healthcheck:
       test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"Your_password123\" -C -Q \"SELECT 1\" || exit 1"]
       interval: 10s
@@ -32,13 +28,14 @@ services:
         condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      # Inside the compose network the DB host is "sqlserver" on its internal port 1433.
+      # Note: inside the compose network the DB host is "sqlserver", not localhost.
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=AuthDb;User Id=sa;Password=Your_password123;TrustServerCertificate=True;Encrypt=False"
       Jwt__Key: "super_secret_jwt_signing_key_change_me_at_least_32_chars"
       Jwt__Issuer: "MicroserviceLab"
       Jwt__Audience: "MicroserviceLabClients"
+      AllowedOrigins: "http://localhost:8080,http://localhost:5173"
     ports:
-      - "7001:8080"
+      - "5001:8080"
 
   productservice:
     build: ./services/ProductService
@@ -53,33 +50,20 @@ services:
       Jwt__Key: "super_secret_jwt_signing_key_change_me_at_least_32_chars"
       Jwt__Issuer: "MicroserviceLab"
       Jwt__Audience: "MicroserviceLabClients"
+      AllowedOrigins: "http://localhost:8080,http://localhost:5173"
     ports:
-      - "7002:8080"
-
-  gateway:
-    build: ./services/ApiGateway
-    container_name: lab-gateway
-    depends_on:
-      - authservice
-      - productservice
-    environment:
-      # Loads ocelot.Docker.json (routes to authservice / productservice).
-      ASPNETCORE_ENVIRONMENT: Docker
-      AllowedOrigins: "http://localhost:7080,http://localhost:7173"
-    ports:
-      - "7000:8080"
+      - "5002:8080"
 
   frontend:
     build:
       context: ./frontend
       args:
-        # The browser runs on the host, so it reaches the gateway via localhost:7000.
-        VITE_API_URL: "http://localhost:7000"
+        # The browser runs on the host, so it reaches the APIs via localhost.
+        VITE_AUTH_API_URL: "http://localhost:5001"
+        VITE_PRODUCT_API_URL: "http://localhost:5002"
     container_name: lab-frontend
     depends_on:
-      - gateway
+      - authservice
+      - productservice
     ports:
-      - "7080:80"
-
-volumes:
-  sqldata:
+      - "8080:80"

@@ -1,75 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Segoe UI, system-ui, sans-serif">
-  <rect width="1000" height="540" fill="#f8fafc"/>
-  <text x="500" y="38" text-anchor="middle" font-size="23" font-weight="700" fill="#0f172a">System Architecture — Microservices CRUD App with API Gateway</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="920" height="520" fill="#f8fafc"/>
+  <text x="460" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">System Architecture — Microservices CRUD App</text>
 
   <!-- Browser / React -->
-  <rect x="30" y="210" width="170" height="120" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
-  <text x="115" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#3730a3">Browser</text>
-  <text x="115" y="270" text-anchor="middle" font-size="13" fill="#4338ca">React SPA (Vite)</text>
-  <text x="115" y="292" text-anchor="middle" font-size="11" fill="#6366f1">:7080 (docker) / :7173 (dev)</text>
-  <text x="115" y="312" text-anchor="middle" font-size="11" fill="#64748b">talks ONLY to gateway</text>
-
-  <!-- Gateway -->
-  <rect x="270" y="210" width="170" height="120" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
-  <text x="355" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#7e22ce">API Gateway</text>
-  <text x="355" y="270" text-anchor="middle" font-size="13" fill="#9333ea">Ocelot (ASP.NET)</text>
-  <text x="355" y="292" text-anchor="middle" font-size="12" fill="#a855f7">:7000</text>
-  <text x="355" y="312" text-anchor="middle" font-size="11" fill="#64748b">routes + CORS</text>
+  <rect x="40" y="200" width="200" height="120" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="235" text-anchor="middle" font-size="17" font-weight="700" fill="#3730a3">Browser</text>
+  <text x="140" y="262" text-anchor="middle" font-size="14" fill="#4338ca">React SPA (Vite)</text>
+  <text x="140" y="284" text-anchor="middle" font-size="12" fill="#6366f1">http://localhost:8080</text>
+  <text x="140" y="304" text-anchor="middle" font-size="12" fill="#64748b">Login · Register · CRUD</text>
 
   <!-- Auth service -->
-  <rect x="520" y="90" width="210" height="120" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
-  <text x="625" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#065f46">Auth Service</text>
-  <text x="625" y="146" text-anchor="middle" font-size="12" fill="#047857">ASP.NET Core Web API</text>
-  <text x="625" y="167" text-anchor="middle" font-size="12" fill="#059669">:7001 · /api/auth</text>
-  <text x="625" y="188" text-anchor="middle" font-size="11" fill="#64748b">register · login · issue JWT</text>
+  <rect x="380" y="90" width="220" height="130" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="490" y="122" text-anchor="middle" font-size="17" font-weight="700" fill="#065f46">Auth Service</text>
+  <text x="490" y="146" text-anchor="middle" font-size="13" fill="#047857">ASP.NET Core Web API</text>
+  <text x="490" y="167" text-anchor="middle" font-size="12" fill="#059669">:5001  ·  /api/auth</text>
+  <text x="490" y="188" text-anchor="middle" font-size="12" fill="#64748b">register · login · issue JWT</text>
 
   <!-- Product service -->
-  <rect x="520" y="330" width="210" height="120" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
-  <text x="625" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#92400e">Product Service</text>
-  <text x="625" y="386" text-anchor="middle" font-size="12" fill="#b45309">ASP.NET Core Web API</text>
-  <text x="625" y="407" text-anchor="middle" font-size="12" fill="#d97706">:7002 · /api/products</text>
-  <text x="625" y="428" text-anchor="middle" font-size="11" fill="#64748b">[Authorize] CRUD · validate JWT</text>
+  <rect x="380" y="300" width="220" height="130" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="332" text-anchor="middle" font-size="17" font-weight="700" fill="#92400e">Product Service</text>
+  <text x="490" y="356" text-anchor="middle" font-size="13" fill="#b45309">ASP.NET Core Web API</text>
+  <text x="490" y="377" text-anchor="middle" font-size="12" fill="#d97706">:5002  ·  /api/products</text>
+  <text x="490" y="398" text-anchor="middle" font-size="12" fill="#64748b">[Authorize] CRUD · validate JWT</text>
 
   <!-- Databases -->
   <g>
-    <ellipse cx="880" cy="112" rx="52" ry="15" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-    <path d="M828 112 v38 a52 15 0 0 0 104 0 v-38" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-    <text x="880" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#3730a3">AuthDb</text>
-    <text x="880" y="182" text-anchor="middle" font-size="10" fill="#64748b">SQL Server</text>
+    <ellipse cx="800" cy="110" rx="55" ry="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <path d="M745 110 v40 a55 16 0 0 0 110 0 v-40" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="800" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">AuthDb</text>
+    <text x="800" y="185" text-anchor="middle" font-size="11" fill="#64748b">SQL Server</text>
   </g>
   <g>
-    <ellipse cx="880" cy="352" rx="52" ry="15" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-    <path d="M828 352 v38 a52 15 0 0 0 104 0 v-38" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-    <text x="880" y="380" text-anchor="middle" font-size="12" font-weight="700" fill="#3730a3">ProductDb</text>
-    <text x="880" y="422" text-anchor="middle" font-size="10" fill="#64748b">SQL Server</text>
+    <ellipse cx="800" cy="330" rx="55" ry="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <path d="M745 330 v40 a55 16 0 0 0 110 0 v-40" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="800" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">ProductDb</text>
+    <text x="800" y="405" text-anchor="middle" font-size="11" fill="#64748b">SQL Server</text>
   </g>
 
+  <!-- Arrows -->
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
     </marker>
   </defs>
 
-  <!-- Browser -> Gateway -->
-  <path d="M200 270 H265" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="232" y="260" text-anchor="middle" font-size="10" fill="#334155">Bearer JWT</text>
+  <!-- React -> Auth -->
+  <path d="M240 240 C 310 200, 330 175, 380 160" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="11" fill="#334155">POST /login → JWT</text>
 
-  <!-- Gateway -> Auth -->
-  <path d="M440 250 C 480 210, 490 175, 520 155" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="470" y="200" text-anchor="middle" font-size="10" fill="#334155">/api/auth/*</text>
-  <!-- Gateway -> Product -->
-  <path d="M440 290 C 480 330, 490 365, 520 385" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="470" y="345" text-anchor="middle" font-size="10" fill="#334155">/api/products/*</text>
+  <!-- React -> Product -->
+  <path d="M240 285 C 310 320, 330 345, 380 360" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="345" text-anchor="middle" font-size="11" fill="#334155">Bearer JWT + CRUD</text>
 
   <!-- Auth -> DB -->
-  <path d="M730 150 C 780 130, 795 122, 826 118" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M600 150 C 680 130, 700 120, 745 118" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- Product -> DB -->
-  <path d="M730 390 C 780 372, 795 362, 826 358" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M600 360 C 680 345, 700 338, 745 335" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- shared key link -->
-  <path d="M625 210 L 625 330" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
-  <text x="635" y="275" font-size="11" fill="#64748b">shared JWT signing key</text>
+  <path d="M490 220 L 490 300" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="500" y="265" font-size="11" fill="#64748b">shared JWT signing key</text>
 
-  <text x="500" y="500" text-anchor="middle" font-size="13" fill="#475569">The browser only ever calls the gateway (:7000). Ocelot routes to each service; each service owns its own database.</text>
-  <text x="500" y="522" text-anchor="middle" font-size="12" fill="#94a3b8">Auth signs JWTs; Product validates them statelessly with the same key.</text>
+  <text x="460" y="480" text-anchor="middle" font-size="13" fill="#475569">Each service owns its own database (database-per-service). Auth signs tokens; Product validates them statelessly.</text>
 </svg>

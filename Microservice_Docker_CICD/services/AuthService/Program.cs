@@ -17,7 +17,7 @@ builder.Services.AddScoped<TokenService>();
 
 // CORS: allow the React frontend to call this API from the browser.
 var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                     ?? new[] { "http://localhost:7000", "http://localhost:7173", "http://localhost:7080" };
+                     ?? new[] { "http://localhost:5173" };
 
 builder.Services.AddCors(options =>
 {

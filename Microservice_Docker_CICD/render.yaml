@@ -1,65 +1,47 @@
-# Render Blueprint — deploys the PRE-BUILT images from Docker Hub (pushed by CI).
+# Render Blueprint — provisions the app services from this repo.
 # Docs: https://render.com/docs/blueprint-spec
 #
-# BEFORE using this: replace every YOUR_DOCKERHUB_USERNAME with your Docker Hub user.
-# The images are built & pushed by .github/workflows/ci-cd.yml.
-#
-# DATABASE: Render's free tier does not run SQL Server, so host it externally (e.g. the
-# Azure SQL Database free offer) and paste the connection string into the sync:false
-# env vars below. See the tutorial, Part I.
+# ABOUT THE DATABASE:
+# Render's free tier does NOT run SQL Server. To keep SQL Server end-to-end we
+# host the database OUTSIDE Render (a free managed SQL Server such as the
+# Azure SQL Database free offer) and give Render only the connection string.
+# So there is NO `databases:` block here — you paste the SQL Server connection
+# string into the ConnectionStrings__DefaultConnection env var (marked sync:false)
+# in the Render dashboard. See the tutorial, Part 8.
 services:
-  # ----- API Gateway (Ocelot) — the only public entry point for the browser -----
-  - type: web
-    name: lab-gateway
-    runtime: image
-    image:
-      url: docker.io/YOUR_DOCKERHUB_USERNAME/lab-gateway:latest
-    plan: free
-    healthCheckPath: /health
-    envVars:
-      - key: ASPNETCORE_ENVIRONMENT
-        value: Production            # loads ocelot.Production.json
-      - key: AllowedOrigins
-        sync: false                  # set to your frontend URL
-      # Point the gateway at your deployed services (override the Production routes):
-      - key: Routes__0__DownstreamHostAndPorts__0__Host
-        sync: false                  # e.g. lab-authservice.onrender.com
-      - key: Routes__1__DownstreamHostAndPorts__0__Host
-        sync: false                  # e.g. lab-productservice.onrender.com
-      - key: Routes__2__DownstreamHostAndPorts__0__Host
-        sync: false                  # e.g. lab-productservice.onrender.com
-
   # ----- Auth microservice -----
   - type: web
     name: lab-authservice
-    runtime: image
-    image:
-      url: docker.io/YOUR_DOCKERHUB_USERNAME/lab-authservice:latest
+    runtime: docker
+    dockerfilePath: ./services/AuthService/Dockerfile
+    dockerContext: ./services/AuthService
     plan: free
     healthCheckPath: /health
     envVars:
       - key: ConnectionStrings__DefaultConnection
-        sync: false                  # your SQL Server connection string
+        sync: false                 # paste your Azure SQL / SQL Server connection string
       - key: Jwt__Key
-        generateValue: true          # generate a strong secret once…
+        generateValue: true         # Render generates a strong secret once…
       - key: Jwt__Issuer
         value: MicroserviceLab
       - key: Jwt__Audience
         value: MicroserviceLabClients
+      - key: AllowedOrigins
+        sync: false                 # set to your frontend URL after first deploy
 
   # ----- Product (CRUD) microservice -----
   - type: web
     name: lab-productservice
-    runtime: image
-    image:
-      url: docker.io/YOUR_DOCKERHUB_USERNAME/lab-productservice:latest
+    runtime: docker
+    dockerfilePath: ./services/ProductService/Dockerfile
+    dockerContext: ./services/ProductService
     plan: free
     healthCheckPath: /health
     envVars:
       - key: ConnectionStrings__DefaultConnection
-        sync: false
+        sync: false                 # SAME database is fine, or a separate one
       - key: Jwt__Key
-        fromService:                 # reuse the EXACT key the Auth service generated
+        fromService:                # reuse the EXACT key the Auth service generated
           type: web
           name: lab-authservice
           envVarKey: Jwt__Key
@@ -67,11 +49,18 @@ services:
         value: MicroserviceLab
       - key: Jwt__Audience
         value: MicroserviceLabClients
+      - key: AllowedOrigins
+        sync: false
 
-  # ----- React frontend (nginx image; the gateway URL is baked in at CI build time) -----
+  # ----- React frontend (static site) -----
   - type: web
     name: lab-frontend
-    runtime: image
-    image:
-      url: docker.io/YOUR_DOCKERHUB_USERNAME/lab-frontend:latest
-    plan: free
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_AUTH_API_URL
+        sync: false                 # set to the deployed auth service URL
+      - key: VITE_PRODUCT_API_URL
+        sync: false                 # set to the deployed product service URL
