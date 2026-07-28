@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\FGW-AMD201\\Docker\\mvc\\mvc.csproj": {}
+    "D:\\code\\AMD201\\Docker\\mvc\\mvc.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\FGW-AMD201\\Docker\\mvc\\mvc.csproj": {
+    "D:\\code\\AMD201\\Docker\\mvc\\mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\FGW-AMD201\\Docker\\mvc\\mvc.csproj",
+        "projectUniqueName": "D:\\code\\AMD201\\Docker\\mvc\\mvc.csproj",
         "projectName": "mvc",
-        "projectPath": "D:\\workspace\\FGW-AMD201\\Docker\\mvc\\mvc.csproj",
+        "projectPath": "D:\\code\\AMD201\\Docker\\mvc\\mvc.csproj",
         "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\FGW-AMD201\\Docker\\mvc\\obj\\",
+        "outputPath": "D:\\code\\AMD201\\Docker\\mvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -45,10 +46,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
@@ -75,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
