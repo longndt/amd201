@@ -16,16 +16,13 @@
 
 | Resource | Path | Use it for |
 |----------|------|-----------|
-| 🖥️ Slide deck | [`docs/slides.html`](docs/slides.html) | Open in a browser to present (arrow keys to navigate; **⤓ PDF** button → *Print → Save as PDF*) |
-| 👩‍🏫 Instructor guide | [`INSTRUCTOR_GUIDE.md`](INSTRUCTOR_GUIDE.md) | Timing, talking points, common mistakes, grading rubric |
 | 🔌 API tests (REST Client) | [`requests/auth.http`](requests/auth.http), [`requests/products.http`](requests/products.http) | Test the APIs from VS Code |
 | 📮 Postman collection | [`requests/MicroserviceLab.postman_collection.json`](requests/MicroserviceLab.postman_collection.json) | Import into Postman (auto-saves the token) |
 | 🧪 Unit tests | [`services/AuthService.Tests`](services/AuthService.Tests), [`services/ProductService.Tests`](services/ProductService.Tests) | xUnit tests run in CI (`dotnet test`) |
 | ☁️ Render env files | [`deploy/`](deploy) | Copy-paste env vars for each Render service |
 | 🖼️ Diagrams & figures | [`docs/images/`](docs/images) | Architecture, JWT flow, UI mockups, CI/CD |
 
-> **Students:** follow this README top to bottom. **Instructors:** start with the slide
-> deck + `INSTRUCTOR_GUIDE.md`.
+> Follow this README top to bottom.
 
 ---
 
@@ -212,7 +209,7 @@ Microservice_Docker_CICD/
 │
 ├── deploy/                       ← Render env-var templates
 ├── requests/                     ← .http + Postman API tests (via the gateway)
-├── docs/                         ← slides.html + images/
+├── docs/                         ← images/
 │
 └── frontend/                     ← React (Vite) single-page app
     ├── src/
