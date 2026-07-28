@@ -8,8 +8,6 @@
 > pipeline (GitHub Actions) that **pushes images to Docker Hub**, and finally **deployed
 > to Render** from those images.
 
-**Estimated time:** 4–5 hours · **Level:** Intermediate
-
 ---
 
 ## 📦 Companion materials (in this repo)
